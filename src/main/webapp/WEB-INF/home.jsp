@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<jsp:include page="../layouts/header.jsp"/>
+<jsp:include page="./layouts/header.jsp"/>
 <div id="page-container">
     <section>
         <div id="header-img">
@@ -53,7 +53,7 @@
         <button type="submit"></button>
     </form>
 </div>
-<jsp:include page="../layouts/footer.jsp"/>
+<jsp:include page="./layouts/footer.jsp"/>
 </body>
 
 </html>
