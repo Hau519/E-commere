@@ -9,14 +9,14 @@
 <head>
     <meta charset="utf-8">
     <title>Farm Fresh</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <jsp:include page="../layouts/header.jsp"/>
 <div id="page-container">
     <section>
         <div id="header-img">
-            <img src="../img/header4.jpg" width="100%" alt="header">
+            <img src="img/header4.jpg" width="100%" alt="header">
             <div id="ad">
                 <p>Welcome to Farm Fresh</p>
             </div>
@@ -24,23 +24,23 @@
         <div>
             <p id="inseason">What's in Season</p>
             <div id="container">
-                <img src="../img/vegetables.jpg" width="45%">
+                <img src="img/vegetables.jpg" width="45%">
                 <div id="in-season1">Pre-order our products</div>
                 <div class="box">
                     <div class="in-season">
-                        <img src="../img/spring.jpg" width="85%" height="80%">
+                        <img src="img/spring.jpg" width="85%" height="80%">
                         <p class="season">Spring</p>
                     </div>
                     <div class="in-season">
-                        <img src="../img/summer.jpg" width="85%" height="80%">
+                        <img src="img/summer.jpg" width="85%" height="80%">
                         <p class="season">Summer</p>
                     </div>
                     <div class="in-season">
-                        <img src="../img/winter.jpg" width="85%" height="80%">
+                        <img src="img/winter.jpg" width="85%" height="80%">
                         <p class="season">Winter</p>
                     </div>
                     <div class="in-season">
-                        <img src="../img/automn.jpg" width="85%" height="80%">
+                        <img src="img/automn.jpg" width="85%" height="80%">
                         <p class="season">Autumn</p>
                     </div>
                 </div>
