@@ -11,10 +11,10 @@
     <title>Product page</title>
 </head>
 <body>
+<div id="page-container">
     <jsp:include page="../layouts/header.jsp"></jsp:include>
-    <div id="page-container">
     <h1>This is our products</h1>
-        <jsp:include page="../layouts/header.jsp"></jsp:include>
+    <jsp:include page="../layouts/footer.jsp"></jsp:include>
 </div>
 </body>
 </html>
