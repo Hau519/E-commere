@@ -13,7 +13,7 @@ public class HomeController extends HttpServlet {
 
         request.setAttribute("message", "message from servlet");
         request.setAttribute("username", "Clients");
-        request.getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/home.jsp").forward(request, response);
     }
 
 

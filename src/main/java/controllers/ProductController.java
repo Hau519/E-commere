@@ -6,11 +6,11 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "ProductController", value = "/Products")
+@WebServlet(name = "ProductController", value = "/products")
 public class ProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/products.jsp").forward(request,response);
+        request.getRequestDispatcher("WEB-INF/product.jsp").forward(request,response);
     }
 
 }
