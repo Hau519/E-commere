@@ -12,7 +12,7 @@ public class HomeController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         request.setAttribute("message", "message from servlet");
-        request.setAttribute("username", "Client");
+        request.setAttribute("username", "Clients");
         request.getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
     }
 
