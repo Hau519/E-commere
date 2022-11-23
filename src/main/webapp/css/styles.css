@@ -138,4 +138,71 @@ nav li {
 }
 
 /* Login */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 15px;
+
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 5px 0;
+    color:white;
+
+}
+
+footer a {
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.follow {
+    margin-top: 20px;
+}
+
+.follow i {
+    color : white;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+.install .row img {
+    border-radius: 6px;
+
+}
+
+.install img {
+    margin: 10px 0 15px 0;
+}
+
+.follow i:hover,
+footer a:hover
+{
+    color: black;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+
+}
+
+.copyright p {
+    color: white;
+}
 
