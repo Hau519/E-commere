@@ -37,10 +37,10 @@
     <p>From App Store or Google Play</p>
     <div class="row">
       <img src="./img/pay.png">
-      <img src="./media/play.jpg">
+      <img src="./img/play.jpg">
     </div>
     <p>Secured Payment Gateways</p>
-    <img src="./media/pay.png">
+    <img src="./img/pay.png">
   </div>
 
   <div class="copyright">
