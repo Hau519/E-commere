@@ -10,6 +10,7 @@
     <meta charset="utf-8">
     <title>Farm Fresh</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"/>
@@ -26,24 +27,28 @@
             <div id="container">
                 <img src="img/vegetables.jpg" width="45%">
                 <div id="in-season1">Pre-order our products</div>
+                <div id="pre-order">
+                    <p class="order-btn">
+                        <input type="submit" value="Pre-Order">
+                    </p>
+                </div>
                 <div class="box">
                     <div class="in-season">
-                        <img src="img/spring.jpg" width="85%" height="80%">
-                        <p class="season">Spring</p>
+                        <img src="./img/spring.jpg" width="95%" height="80%">
+                        <p class="season-1">Spring</p>
                     </div>
                     <div class="in-season">
-                        <img src="img/summer.jpg" width="85%" height="80%">
-                        <p class="season">Summer</p>
+                        <img src="./img/summer.jpg" width="95%" height="80%">
+                        <p class="season-2">Summer</p>
                     </div>
                     <div class="in-season">
-                        <img src="img/winter.jpg" width="85%" height="80%">
-                        <p class="season">Winter</p>
+                        <img src="./img/winter.jpg" width="95%" height="80%">
+                        <p class="season-3">Winter</p>
                     </div>
                     <div class="in-season">
-                        <img src="img/automn.jpg" width="85%" height="80%">
-                        <p class="season">Autumn</p>
+                        <img src="./img/automn.jpg" width="95%" height="80%">
+                        <p class="season-4">Autumn</p>
                     </div>
-                </div>
             </div>
         </div>
     </section>

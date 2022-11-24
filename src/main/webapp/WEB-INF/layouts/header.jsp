@@ -13,6 +13,7 @@
                 <li><a href="${pageContext.request.contextPath}/products">Products</a></li>
                 <li><a href="#">Our Story</a></li>
                 <li><a href="#">Login</a></li>
+                <li><a href="#"><img src="./img/cart.png" width="2.3%"></a></li>
             </ul>
         </nav>
     </div>
