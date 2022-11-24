@@ -49,6 +49,7 @@
                         <img src="./img/automn.jpg" width="95%" height="80%">
                         <p class="season-4">Autumn</p>
                     </div>
+                </div>
             </div>
         </div>
     </section>
@@ -57,8 +58,8 @@
         <input name="name-filter" id="name-filter-id"/>
         <button type="submit"></button>
     </form>
-</div>
 <jsp:include page="./layouts/footer.jsp"/>
+</div>
 </body>
 
 </html>
