@@ -40,8 +40,27 @@
         </tr>
         <%}
         %>
+
+        <%
+            for (Map.Entry<Integer, Products> product : products.entrySet())
+            { %>
+            <a class="products" href="#">
+                <img src="../img/tomato.jpg">
+                <p class="name"><%= product.getValue().getName() %></p>
+                <p class="Category"><%= product.getValue().getCategory() %></p>
+                <p class="price"><%= product.getValue().getPrice() %> per <%= product.getValue().getUnit() %> </p>
+                <p class="description"><%= product.getValue().getDescription() %></p>
+            </a>
+        <%}
+        %>
+
         </tbody>
     </table>
+
+
+
+
+
     <jsp:include page="./layouts/footer.jsp"></jsp:include>
 </div>
 </body>
