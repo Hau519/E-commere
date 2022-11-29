@@ -5,7 +5,7 @@
 <div id="showcase">
     <div class="header-container">
         <div id="branding">
-            <a href="#"><img src="${pageContext.request.contextPath}/img/logo1.png" width="80%" alt="logo"></a>
+            <a href="${pageContext.request.contextPath}/home"><img src="${pageContext.request.contextPath}/img/logo1.png" width="80%" alt="logo"></a>
         </div>
         <nav>
             <ul>
