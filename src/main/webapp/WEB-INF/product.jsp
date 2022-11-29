@@ -22,12 +22,6 @@ s
         <%
             for (Map.Entry<Integer, Products> product : products.entrySet())
             { %>
-        <%}
-        %>
-
-        <%
-            for (Map.Entry<Integer, Products> product : products.entrySet())
-            { %>
             <a class="products" href="#">
                 <img src="${pageContext.request.contextPath}/img/tomato.jpg">
                 <p class="name"><%= product.getValue().getName() %></p>
