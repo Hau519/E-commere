@@ -1,17 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: hauka
-  Date: 2022-11-15
-  Time: 2:36 p.m.
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 </head>
 <body>
-<h1>This is log in page</h1>
+<div id="page-container">
+    <jsp:include page="./layouts/header.jsp"/>
 
+    <jsp:include page="./layouts/footer.jsp"/>
+</div>
 </body>
 </html>

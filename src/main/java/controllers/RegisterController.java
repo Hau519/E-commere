@@ -6,17 +6,14 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "HomeController", value = "/home")
-public class HomeController extends HttpServlet {
+@WebServlet(name = "RegisterController", value = "/register")
+public class RegisterController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        //logic part
-
-        HttpSession session = request.getSession();
-        session.setAttribute("username", "Customer");
         request.setAttribute("message", "message from servlet");
-        request.getRequestDispatcher("WEB-INF/home.jsp").forward(request, response);
+        request.setAttribute("username", "Clients");
+        request.getRequestDispatcher("WEB-INF/register.jsp").forward(request, response);
     }
 
 

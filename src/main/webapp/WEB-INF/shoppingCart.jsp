@@ -1,16 +1,18 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: hauka
-  Date: 2022-11-15
-  Time: 2:35 p.m.
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 </head>
 <body>
-<h1>This is my shopping cart</h1>
+<jsp:include page="./layouts/header.jsp"/>
+
+
+<jsp:include page="./layouts/footer.jsp"/>
 </body>
+
 </html>

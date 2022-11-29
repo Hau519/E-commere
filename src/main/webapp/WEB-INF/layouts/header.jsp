@@ -1,5 +1,5 @@
 <%
-    String username = (String) request.getAttribute("username");
+    String username = (String) session.getAttribute("username");
 %>
 
 <div id="showcase">
@@ -9,7 +9,8 @@
         </div>
         <nav>
             <ul>
-                <li class="current"><a href="${pageContext.request.contextPath}/home">Home</a></li>
+                <li><p>Welcome <%= username %></p></li>
+                <li><a href="${pageContext.request.contextPath}/home">Home</a></li>
                 <li><a href="${pageContext.request.contextPath}/products">Products</a></li>
                 <li><a href="${pageContext.request.contextPath}/ourStory">Our Story</a></li>
                 <li><a href="${pageContext.request.contextPath}/login">Login</a></li>

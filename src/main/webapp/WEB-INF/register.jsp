@@ -1,12 +1,14 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-
 <html>
 <head>
-    <title>Title</title>
+    <title>Register</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 </head>
 <body>
-<h1>This is register page</h1>
+<div id="page-container">
+    <jsp:include page="./layouts/header.jsp"/>
+
+    <jsp:include page="./layouts/footer.jsp"/>
+</div>
 </body>
 </html>
