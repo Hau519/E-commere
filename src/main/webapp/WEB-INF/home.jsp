@@ -53,11 +53,7 @@
             </div>
         </div>
     </section>
-    <form action="${pageContext.request.contextPath}/Products" method="get">
-        <label for="name-filter-id">Filter by name</label>
-        <input name="name-filter" id="name-filter-id"/>
-        <button type="submit"></button>
-    </form>
+
 
 <jsp:include page="./layouts/footer.jsp"/>
 </div>
