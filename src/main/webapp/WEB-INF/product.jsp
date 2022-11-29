@@ -23,7 +23,7 @@ s
             for (Map.Entry<Integer, Products> product : products.entrySet())
             { %>
             <a class="products" href="#">
-                <img src="${pageContext.request.contextPath}/img/tomato.jpg">
+                <img src="${pageContext.request.contextPath}/img/<%= product.getValue().getName() %>.jpg">
                 <p class="name"><%= product.getValue().getName() %></p>
                 <p class="Category"><%= product.getValue().getCategory() %></p>
                 <p class="price"><%= product.getValue().getPrice() %> per <%= product.getValue().getUnit() %> </p>
@@ -31,7 +31,11 @@ s
             </a>
         <%}
         %>
-
+    <form action="${pageContext.request.contextPath}/Products" method="get">
+        <label for="name-input">Search by name</label>
+        <input name="name-input" id="name-input"/>
+        <button type="submit" value="search">Search</button>
+    </form>
 </div>
 <jsp:include page="./layouts/footer.jsp"></jsp:include>
 
