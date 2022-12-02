@@ -12,12 +12,13 @@
 <head>
     <title>Product page</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+    <link rel="Shortcut Icon" href="img/miniapple.png" type="image/x-icon">
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"></jsp:include>
-s
+
 <div id="page-container">
-    <h1>This is our products</h1>
+    <br><br>
 
         <%
             for (Map.Entry<Integer, Products> product : products.entrySet())

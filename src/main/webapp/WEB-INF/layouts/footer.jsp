@@ -2,7 +2,7 @@
 <footer class="section-p1">
 
   <div class="col">
-    <img src="./media/logo1.png" class="logo" height="100px" width="100px">
+    <img src="./img/logo1.png" class="logo" height="100px" width="100px">
     <h4>Contact</h4>
     <p><strong>Address: </strong>5110 Rue Buchan Montreal,QC Canada</p>
     <p><strong>Phone: </strong>+1(438)778-2242/+1(438)778-5555</p>
