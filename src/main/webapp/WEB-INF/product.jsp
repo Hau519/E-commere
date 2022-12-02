@@ -23,7 +23,7 @@ s
             for (Map.Entry<Integer, Products> product : products.entrySet())
             { %>
             <a class="products" href="#">
-                <img src="${pageContext.request.contextPath}/img/<%= product.getValue().getName() %>.jpg">
+                <img src="${pageContext.request.contextPath}/img/<%= product.getValue().getName() %>.jpg" alt="product of <%= product.getValue().getName() %>">
                 <p class="name"><%= product.getValue().getName() %></p>
                 <p class="Category"><%= product.getValue().getCategory() %></p>
                 <p class="price"><%= product.getValue().getPrice() %> per <%= product.getValue().getUnit() %> </p>
@@ -31,9 +31,9 @@ s
             </a>
         <%}
         %>
-    <form action="${pageContext.request.contextPath}/Products" method="get">
+    <form action="#" method="get">
         <label for="name-input">Search by name</label>
-        <input name="name-input" id="name-input"/>
+        <input name="name" id="name-input"/>
         <button type="submit" value="search">Search</button>
     </form>
 </div>

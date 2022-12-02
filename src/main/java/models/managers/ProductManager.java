@@ -10,10 +10,10 @@ import java.sql.SQLException;
 import java.util.HashMap;
 
 public class ProductManager {
-    @Language("SQL")
+    @Language("MySQL")
     private static final String queryDisplay = "select * from products";
 
-    @Language("SQL")
+    @Language("MySQL")
     private static final String querySearch = "select * from products where lower(name) = ?";
 
     public static HashMap<Integer, Products> getAll(){
@@ -43,6 +43,7 @@ public class ProductManager {
     public static HashMap<Integer, Products> getProductByName(String productName){
         HashMap<Integer, Products> result = new HashMap<>();
         try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(querySearch)){
+            preparedStatement.setString(1, productName.toLowerCase());
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 int id = resultSet.getInt("id");
