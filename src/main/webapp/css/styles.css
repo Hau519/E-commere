@@ -367,17 +367,26 @@ footer a:hover
 /* Products */
 
 .products_container{
-    width: 745px;
+    text-align: center;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    display: table-cell;
+    position: relative;
+
+
 }
 
 .products{
-    margin-bottom: 80px;
+
+    margin-bottom: 50px;
     float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 .products_container a{
+    text-align: center;
     text-decoration: none;
     color: gray;
 }
@@ -388,7 +397,7 @@ footer a:hover
 }
 
 .products:hover{
-    border: 1px solid 	#50C878;
+    box-shadow: 0 0 15px rgba(33,33,33,.2);
 }
 .products img{
     width: 225px;
@@ -398,18 +407,95 @@ footer a:hover
     font-size: 16px;
 }
 
-.products .name{
+.products .name,
+.products .category{
     margin: 20px 0 4px 0;
     font-size: 16px;
+
 }
 
 .products .description{
     margin: 20px 0 4px 0;
     font-size: 13px;
+
 }
 
 .price{
     margin: 0;
+    color: orangered;
+
 }
 
+#quantity_form {
 
+    text-align: center;
+    padding: 5px;
+    border: 1px dotted #ccc;
+    margin: 2%;
+}
+.qty {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+input.qtyplus { width:25px; height:25px;}
+input.qtyminus { width:25px; height:25px;}
+
+
+.add-btn [type="submit"]{
+    width: 80%;
+    height: 45px;
+    color: white;
+    background-color: #94C348;
+    font-weight:bold;
+    font-size: 13px;
+    padding: 10px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-btn [type="submit"]:hover{
+    background-color:orangered;
+}
+
+.wish-btn [type="submit"] {
+    width: 80%;
+    height: 45px;
+    color: white;
+    background-color: darkseagreen;
+    font-weight:bold;
+    font-size: 13px;
+    padding: 10px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.wish-btn [type="submit"]:hover{
+    background-color: #FF6347;
+}
+
+#search-btn {
+    width: 100px;
+    color: black;
+    background-color: lightgrey;
+    font-weight:bold;
+    font-size: 12px;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#search-btn:hover{
+    background-color: dimgrey;
+}
+
+#name-input {
+    width: 200px;
+    height: 28px;
+    border: lightgrey 1px solid;
+    border-radius: 5px;
+}

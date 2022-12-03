@@ -17,9 +17,9 @@
 <body>
 <jsp:include page="./layouts/header.jsp"></jsp:include>
 
-<div id="page-container">
+<div class="products_container">
     <br><br>
-
+    <h3>Our Products</h3>
         <%
             for (Map.Entry<Integer, Products> product : products.entrySet())
             { %>
@@ -29,15 +29,32 @@
                 <p class="Category"><%= product.getValue().getCategory() %></p>
                 <p class="price"><%= product.getValue().getPrice() %> per <%= product.getValue().getUnit() %> </p>
                 <p class="description"><%= product.getValue().getDescription() %></p>
+                <form id='quantity_form' method='POST' class='quantity' action='#'>
+                    <input type='button' value='-' class='qtyminus minus' field='quantity' />
+                    <input type='text' name='quantity' value='0' class='qty' />
+                    <input type='button' value='+' class='qtyplus plus' field='quantity' />
+                </form>
+                <div id="add-product">
+                    <p class="add-btn">
+                        <input type="submit" value="Add to Cart">
+                    </p>
+                </div>
+                <div id="wish-btn">
+                    <p class="wish-btn">
+                        <input type="submit" value="Add to WishList">
+                    </p>
+                </div>
             </a>
         <%}
         %>
-    <form action="#" method="get">
-        <label for="name-input">Search by name</label>
-        <input name="name" id="name-input"/>
-        <button type="submit" value="search">Search</button>
-    </form>
+
 </div>
+<form action="#" method="get">
+    <label for="name-input"><b>Search by name</b></label>
+    <input name="name" id="name-input"/>
+    <button type="submit" id="search-btn" value="search">Search</button>
+</form>
+<br>
 <jsp:include page="./layouts/footer.jsp"></jsp:include>
 
 </body>
