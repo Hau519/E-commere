@@ -2,7 +2,7 @@
 <footer class="section-p1">
 
   <div class="col">
-    <img src="./img/logo1.png" class="logo" height="100px" width="100px">
+    <img src="${pageContext.request.contextPath}/img/logo1.png" class="logo" height="100px" width="100px">
     <h4>Contact</h4>
     <p><strong>Address: </strong>5110 Rue Buchan Montreal,QC Canada</p>
     <p><strong>Phone: </strong>+1(438)778-2242/+1(438)778-5555</p>
@@ -27,6 +27,7 @@
 
   <div class="col">
     <h4 onclick="window.location.href='lginpage.html';">My Account</h4>
+    <a href="#" onclick="window.location.href='';">Login</a>
     <a href="#" onclick="window.location.href='shoppingcart.html';">View Cart</a>
     <a href="#">My Wishlist</a>
     <a href="#">Help</a>
@@ -36,15 +37,15 @@
     <h4>Install App</h4>
     <p>From App Store or Google Play</p>
     <div class="row">
-      <img src="./img/pay.png">
-      <img src="./img/play.jpg">
+      <img src="${pageContext.request.contextPath}/img/app.jpg">
+      <img src="${pageContext.request.contextPath}/img/play.jpg">
     </div>
     <p>Secured Payment Gateways</p>
-    <img src="./img/pay.png">
+    <img src="${pageContext.request.contextPath}/img/pay.png">
   </div>
 
   <div class="copyright">
-    <p>©2022, ITSOLUTIONS - E-Commerce Website</p>
+    <p>©2022, HAYHMXITSOLUTIONS - E-Commerce Website</p>
   </div>
 
 </footer>
