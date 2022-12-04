@@ -33,7 +33,6 @@
                 <form id='quantity_form' class='quantity'>
                     <input type='button' value='-' class='qtyminus minus' field='quantity' />
                     <input type='number' name='quantity' value='0' class='qty'/>
-
                     <input type='button' value='+' class='qtyplus plus' field='quantity' />
 
                     <div id="add-product">
