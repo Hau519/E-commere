@@ -27,6 +27,10 @@ public class Products {
         this.description = description;
     }
 
+    public Products() {
+
+    }
+
     public int getId() {
         return id;
     }

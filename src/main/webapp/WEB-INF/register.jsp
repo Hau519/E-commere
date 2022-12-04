@@ -4,9 +4,8 @@
 <head>
     <title>Register</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
-<<<<<<< Updated upstream
     <link rel="Shortcut Icon" href="img/miniapple.png" type="image/x-icon">
-=======
+
     <script>
         function validate(){
             let fName = document.form.fName.value;
@@ -27,7 +26,7 @@
             }
         }
     </script>
->>>>>>> Stashed changes
+
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"/>

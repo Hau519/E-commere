@@ -19,11 +19,8 @@ public class DBConnection {
 
     private final String urlConnection = "jdbc:mysql://localhost:3306/Farm_db";
     private final String username = "root";
-<<<<<<< Updated upstream
-    private final String password = "9831611Qaz*";
-=======
-    private final String password = "";
->>>>>>> Stashed changes
+
+    private final String password = "12345";
     private Connection connection = null;
 
     public PreparedStatement preparedQuery(@Language("MySQL")String query){
