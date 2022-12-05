@@ -12,18 +12,17 @@ public class ProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        HttpSession session = request.getSession();
+       String productName = (String) request.getParameter("name");
 
-        session.setAttribute("productSearch", request.getParameter("name"));
-
-        String productName = (String) session.getAttribute("productSearch");
         if (productName != null){
             ProductAction.getByName(request, productName);
-        } else {
+        }
+        else {
             ProductAction.getAll(request);
         }
         request.getRequestDispatcher("WEB-INF/product.jsp").forward(request,response);
     }
+
 
 
 }
