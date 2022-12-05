@@ -561,6 +561,7 @@ footer a:hover
 .products .description{
     margin: 20px 0 4px 0;
     font-size: 13px;
+    width: 225px;
 
 }
 
@@ -642,4 +643,88 @@ input.qtyminus { width:25px; height:25px;}
     height: 28px;
     border: lightgrey 1px solid;
     border-radius: 5px;
+}
+
+/* Our Story */
+
+.video-section{
+
+    width:100%;
+    margin:0 auto;
+    height: 60%;
+}
+.video-container {
+    background: floralwhite;
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+#story-ad{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    bottom: 45%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 45px;
+}
+
+.story1{
+    background: #ECFFDC;
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+
+
+.story11{
+    position: absolute;
+    top: 15%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    color: dimgray;
+    font-size: 30px;
+    width: 100%;
+}
+
+.story111{
+    position: absolute;
+    top: 38%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color: grey;
+    font-size: 18px;
+    width: 50%;
+}
+
+.story2{
+    background: lightyellow;
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+.story22{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: dimgray;
+    font-size: 30px;
+}
+
+.story222{
+    position: absolute;
+    top: 30%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    color: gray;
+    font-size: 18px;
+    width: 500px;
+}
+
+.story2222{
+    text-align: right;
 }

@@ -10,7 +10,48 @@
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"/>
-<h1><center>This is our story begin...</center></h1>
+<div id="header-img">
+  <img src="img/header4.jpg" width="100%" height="400" alt="header">
+  <div id="story-ad">
+    <p>How Farm Fresh started...</p>
+  </div>
+
+  <section class="story1">
+    <img src="./img/story1.png" width="45%" height="450px">
+    <div class="story11">
+      <p>Our mission is to create a better food system.</p>
+    </div>
+    <div class="story111">
+      <p>Every day, we deliver directly to our customers thousands of food baskets filled with our rooftop-grown veggies.
+        We meet this daily challenge with a vision: to create a better food system, encompassing our rooftop farms and local agriculture in all shapes and sizes.
+        This means farming on rooftops in cities, partnering up with local farmers and food makers, and creating a community of pick-up points to deliver all this
+        food as directly as possible.</p>
+    </div>
+
+  </section>
+  <section class="story2">
+    <div class="story22">
+
+      <p>From the Farm Fresh to your plate</p>
+    </div>
+
+    <div class="story222">
+      <p>We developed a community of hundreds of neighbourhood pick-up points to get food from our rooftops and partners to Lufavores as directly as possible. The idea is efficiency, convenience, and community-building.</p>
+    </div>
+
+    <div class="story2222">
+      <img src="./img/story2.png" width="45%" height="450px"></right>
+
+    </div>
+  </section>
+  <section class="video-section">
+    <div class="video-container ">
+      <br>
+      <h2><center>Farm Fresh is on Youtube!</center></h2>
+      <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Qw5vtdvuFLs?start=23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      <br>
+    </div>
+    <section>
 
 <jsp:include page="./layouts/footer.jsp"/>
 </body>
