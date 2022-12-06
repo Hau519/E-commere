@@ -55,30 +55,31 @@ public class CustomerManager {
             DBConnection.getInstance().close();
         }
     }
-    public static HashMap<Integer, Customer> getUserLogin(Customer newCustomer){
-        HashMap<Integer, Customer> result = new HashMap<>();
+    public static Customer getUserLogin(String email, String password){
+        Customer user = new Customer();
         try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(querySearch)){
-            preparedStatement.setInt(1, newCustomer.getId());
-            preparedStatement.setString(2, newCustomer.getEmail());
-            preparedStatement.setString(3, newCustomer.getPassword());
-            preparedStatement.executeUpdate();
-
-            ResultSet resultSet = preparedStatement.executeQuery("select email, password from customer");
-
+            preparedStatement.setString(1, email);
+            ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                String email = resultSet.getString("email");
-                String password = resultSet.getString("password");
-
-                Customer customer = new Customer(email, password);
-                result.put(customer.getId(), customer);
+                if(resultSet.getString("password")==password){
+                    int id = resultSet.getInt("id");
+                    String fName = resultSet.getString("first_name");
+                    String lName = resultSet.getString("last_name");
+                    String phone = resultSet.getString("phone");
+                    user.setId(id);
+                    user.setEmail(email);
+                    user.setFirstName(fName);
+                    user.setLastName(lName);
+                    user.setPassword(password);
+                    user.setPhone(phone);
+                }
 
             }
-
         }catch(SQLException e){
             throw new RuntimeException(e);
         }finally {
             DBConnection.getInstance().close();
         }
-        return result;
+        return user;
     }
 }
