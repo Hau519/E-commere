@@ -1,6 +1,7 @@
 package models.managers;
 
 import models.entities.Customer;
+import models.entities.Products;
 import org.intellij.lang.annotations.Language;
 import services.DBConnection;
 import java.sql.PreparedStatement;
@@ -14,6 +15,8 @@ public class CustomerManager {
     private static final String queryDisplay = "select * from customer";
     @Language("MySQL")
     private static final String queryInsert = "insert into customer(first_name, last_name, email, phone, password) values (?,?,?,?,?)";
+    @Language("MySQL")
+    private static final String querySearch = "select * from customer where lower(email) = ?";
     public static HashMap<Integer, Customer> getAll(){
         HashMap<Integer, Customer> result = new HashMap<>();
         try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(queryDisplay)){
@@ -51,5 +54,31 @@ public class CustomerManager {
         }finally {
             DBConnection.getInstance().close();
         }
+    }
+    public static HashMap<Integer, Customer> getUserLogin(Customer newCustomer){
+        HashMap<Integer, Customer> result = new HashMap<>();
+        try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(querySearch)){
+            preparedStatement.setInt(1, newCustomer.getId());
+            preparedStatement.setString(2, newCustomer.getEmail());
+            preparedStatement.setString(3, newCustomer.getPassword());
+            preparedStatement.executeUpdate();
+
+            ResultSet resultSet = preparedStatement.executeQuery("select email, password from customer");
+
+            while (resultSet.next()) {
+                String email = resultSet.getString("email");
+                String password = resultSet.getString("password");
+
+                Customer customer = new Customer(email, password);
+                result.put(customer.getId(), customer);
+
+            }
+
+        }catch(SQLException e){
+            throw new RuntimeException(e);
+        }finally {
+            DBConnection.getInstance().close();
+        }
+        return result;
     }
 }

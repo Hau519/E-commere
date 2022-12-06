@@ -16,7 +16,7 @@
                 <div>
                     <h2><b>Login</b></h2>
                 </div>
-                <form>
+                <form action="${pageContext.request.contextPath}/login" method="post">
                     <div class="txtb">
                         <label>Email : </label><span class="error"></span>
                         <input type="email" placeholder='Please enter your e-mail. ' name="email">

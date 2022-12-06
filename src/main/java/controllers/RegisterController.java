@@ -31,34 +31,5 @@ public class RegisterController extends HttpServlet {
         } catch(Exception ex){
             ex.printStackTrace();
         }
-
-        //request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
-
-
-//        if(request.getParameter("register")!=null) {
-//            String fName = request.getParameter("fName");
-//            String lName = request.getParameter("lName");
-//            String phone = request.getParameter("phone");
-//            String email = request.getParameter("email");
-//            String password = request.getParameter("password");
-//
-//            Customer customer = new Customer(fName, lName, phone, password, email);
-//            customer.setFirstName(fName);
-//            customer.setLastName(lName);
-//            customer.setPhone(phone);
-//            customer.setEmail(email);
-//            customer.setPassword(password);
-//
-//            RegisterManager registerManager = new RegisterManager();
-//
-//            String userRegistered = registerManager.registerUser(customer);
-//
-//            if (userRegistered.equals("Success")) {
-//                request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
-//            } else {
-//                request.setAttribute("errMessage", userRegistered);
-//                request.getRequestDispatcher("WEB-INF/register.jsp").forward(request, response);
-//            }
-//        }
     }
 }
