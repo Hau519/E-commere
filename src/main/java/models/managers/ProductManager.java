@@ -14,9 +14,9 @@ public class ProductManager {
     private static final String queryDisplay = "select * from products";
 
     @Language("MySQL")
-    private static final String queryFilterByCategory = "select * from products where lower(category) = ?";
+    private static final String queryFilterByCategory = "select * from products where lower(category) like ?";
     @Language("MySQL")
-    private static final String querySearch = "select * from products where lower(name) = ?";
+    private static final String querySearch = "select * from products where lower(name) like ?";
 
     @Language("MySQL")
     private static final String querySearchById = "select * from products where id = ?";
@@ -48,7 +48,7 @@ public class ProductManager {
     public static HashMap<Integer, Products> getProductByCategory(String categoryName){
         HashMap<Integer, Products> result = new HashMap<>();
         try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(queryFilterByCategory)){
-            preparedStatement.setString(1, categoryName.toLowerCase());
+            preparedStatement.setString(1, "%" + categoryName.toLowerCase() +"%");
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 int id = resultSet.getInt("id");
@@ -73,7 +73,7 @@ public class ProductManager {
     public static HashMap<Integer, Products> getProductByName(String productName){
         HashMap<Integer, Products> result = new HashMap<>();
         try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(querySearch)){
-            preparedStatement.setString(1, productName.toLowerCase());
+            preparedStatement.setString(1, "%" + productName.toLowerCase() +"%");
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 int id = resultSet.getInt("id");
