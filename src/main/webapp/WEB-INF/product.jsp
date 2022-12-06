@@ -51,11 +51,24 @@
         %>
 
 </div>
-<form action="#" method="post">
-    <label for="name-input"><b>Search by name</b></label>
-    <input name="name" id="name-input"/>
-    <button type="submit" id="search-btn" value="search">Search</button>
-</form>
+<div>
+    <form action="#" method="post">
+        <label for="name-input"><b>Search by name</b></label>
+        <input name="name" id="name-input"/>
+        <button type="submit" id="search-btn" value="search">Search</button>
+    </form>
+</div>
+<div>
+    <form action="#" method="post">
+        <label for="category"><b>Filter by category</b></label>
+        <input name="category" id="category"/>
+        <button type="submit" id="filter" value="filter">Filter</button>
+    </form>
+</div>
+
+<a href="${pageContext.request.contextPath}/products">All products</a>
+
+
 <br>
 <jsp:include page="./layouts/footer.jsp"></jsp:include>
 

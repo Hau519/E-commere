@@ -21,12 +21,13 @@ public class ProductController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String productName = (String) request.getParameter("name");
-
-        if (productName != null){
+        if(request.getParameter("category")!=null){
+            String categoryName = (String) request.getParameter("category");
+            ProductAction.getByCategory(request, categoryName);
+        } else if (request.getParameter("name")!=null) {
+            String productName = (String) request.getParameter("name");
             ProductAction.getByName(request, productName);
-        }
-        else {
+        } else {
             ProductAction.getAll(request);
         }
         request.getRequestDispatcher("WEB-INF/product.jsp").forward(request,response);
