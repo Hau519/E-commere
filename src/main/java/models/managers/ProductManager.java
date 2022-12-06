@@ -16,6 +16,9 @@ public class ProductManager {
     @Language("MySQL")
     private static final String querySearch = "select * from products where lower(name) = ?";
 
+    @Language("MySQL")
+    private static final String querySearchById = "select * from products where id = ?";
+
     public static HashMap<Integer, Products> getAll(){
         HashMap<Integer, Products> result = new HashMap<>();
         try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(queryDisplay)){
@@ -63,6 +66,34 @@ public class ProductManager {
             DBConnection.getInstance().close();
         }
         return result;
+    }
+
+    public static Products getProductById(int id){
+        Products product = new Products();
+        try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(querySearchById)){
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                String name = resultSet.getString("name");
+                String category = resultSet.getString("category");
+                float price = resultSet.getFloat("price");
+                String unit = resultSet.getString("unit");
+                int availableQty = resultSet.getInt("availableQty");
+                String description = resultSet.getString("description");
+                product.setId(id);
+                product.setName(name);
+                product.setCategory(category);
+                product.setPrice(price);
+                product.setDescription(description);
+                product.setUnit(unit);
+                product.setAvailableQty(availableQty);
+            }
+        }catch(SQLException e){
+            throw new RuntimeException(e);
+        }finally {
+            DBConnection.getInstance().close();
+        }
+        return product;
     }
 
 

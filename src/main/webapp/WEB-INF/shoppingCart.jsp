@@ -1,5 +1,14 @@
-
+<%@ page import="models.entities.Products" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="models.entities.ShoppingCart" %>
+<%@ page import="java.text.DecimalFormat" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<% ArrayList<ShoppingCart> cartList = (ArrayList<ShoppingCart>) session.getAttribute("cartList");
+    if (cartList == null) cartList = new ArrayList<ShoppingCart>();
+    float total = 0;
+    DecimalFormat formatter = new DecimalFormat("#0.00");
+%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,42 +34,33 @@
         </thead>
 
         <tbody>
+        <% if (cartList.isEmpty()){%>
+        <h2>Your cart is empty</h2>
+        <%} else{%>
+        <% for(ShoppingCart item: cartList){%>
         <div class="dd1">
             <tr class="cart-items">
                 <td><button type="button" class="btn btn-danger"> Remove</button></td>
-                <td><img src="img/Apple.jpg" alt=""></td>
-                <td>Apple</td>
-                <td class="price">$5.99</td>
-                <td><input type="number" value="1" name="" class="quanity"></td>
-                <td>$5.99</td>
+                <td><img src="img/<%= item.getName()%>.jpg" alt=""></td>
+                <td><%= item.getName()%></td>
+                <td class="price">$<%=item.getPrice()%>/<%=item.getUnit()%></td>
+
+                <td>
+<%--                    <input type='text' value='-' class='qtyminus minus' field='quantity' />--%>
+                    <input type="number" value="<%=item.getQuantity()%>" name="" class="quanity" readonly>
+                    <input type='button' value='+' class='qtyplus plus' field='quantity' />
+
+                </td>
+
+                <td>$<%= formatter.format(item.getPrice()*item.getQuantity())%></td>
+                <% total = total + item.getQuantity()*item.getPrice();%>
             </tr>
         </div>
-        <div class="dd1">
-            <tr class="cart-items">
-                <td><button type="button" class="btn btn-danger">Remove</button></td>
-                <td><img src="img/Chicken.jpg"  alt=""></td>
-                <td>Chiken</td>
-                <td class="price">$9.99</td>
-                <td><input type="number" value="1" name="" class="quanity"></td>
-                <td>$9.99</td>
-            </tr>
-        </div>
-        <div class="dd1">
-            <tr class="cart-items">
-                <td><button type="button" class="btn btn-danger"> Remove</button></td>
-                <td><img src="img/eggs.jpg"  alt=""></td>
-                <td>Egg</td>
-                <td class="price">$8.19</td>
-                <td><input type="number" value="1" name="" class="quanity"></td>
-                <td>$8.19</td>
-            </tr>
-        </div>
+        <%}
+        }%>
         </tbody>
     </table>
 </section>
-
-
-
 
 <section id="cart-add" class="section-p1">
 
@@ -77,23 +77,23 @@
         <table>
             <tr>
                 <td>Cart Subtotal</td>
-                <td class="dooha">$ 174.17</td>
+                <td class="dooha"><%= formatter.format(total)%></td>
             </tr>
             <tr>
                 <td>Shipping</td>
                 <td>Free</td>
             </tr>
             <tr>
-                <td><strong>TVQ Tax</strong></td>
-                <td><strong  class="dooha2">$ 17.42</strong></td>
+                <td><strong>QST Tax</strong></td>
+                <td><strong  class="dooha2">$<%=  formatter.format(total*0.0975)%></strong></td>
             </tr>
             <tr>
-                <td><strong> TPS Tax</strong></td>
-                <td><strong  class="dooha3">$ 8.71</strong></td>
+                <td><strong> GST Tax</strong></td>
+                <td><strong  class="dooha3">$ <%=formatter.format(total*0.05)%></strong></td>
             </tr>
             <tr>
-                <td><strong>Total Including 15% Tax</strong></td>
-                <td><strong  class="dooha1">$ 200.30</strong></td>
+                <td><strong>Total Including 14.75% Tax</strong></td>
+                <td><strong  class="dooha1">$ <%= formatter.format(total*1.1475)%></strong></td>
             </tr>
         </table>
         <button class="normal" onclick="window.location.href='payment.html'; validation1()">Proceed to checkout</button>

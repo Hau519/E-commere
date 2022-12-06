@@ -4,7 +4,6 @@
 <%@ page import="java.util.HashMap" %>
 <%@ page import="java.util.Map" %>
 
-
 <%
     HashMap<Integer, Products> products = (HashMap<Integer, Products>) request.getAttribute(ProductAction.PRODUCT_PARAM);
     if (products == null) products = new HashMap<>(); // So that it is not null, but empty
@@ -31,13 +30,14 @@
                 <p class="price"><%= product.getValue().getPrice() %> per <%= product.getValue().getUnit() %> </p>
                 <p class="description"><%= product.getValue().getDescription() %></p>
                 <form id='quantity_form' class='quantity'>
-                    <input type='button' value='-' class='qtyminus minus' field='quantity' />
-                    <input type='number' name='quantity' value='0' class='qty'/>
-                    <input type='button' value='+' class='qtyplus plus' field='quantity' />
+<%--                    <input type='button' value='-' class='qtyminus minus' field='quantity' />--%>
+<%--                    <input type='number' name='quantity' value='0' class='qty'/>--%>
+<%--                    <input type='button' value='+' class='qtyplus plus' field='quantity' />--%>
 
                     <div id="add-product">
                         <p class="add-btn">
-                            <input type="submit" value="Add to Cart">
+                            <a href="${pageContext.request.contextPath}/cart?id=<%=product.getValue().getId()%>">Add to cart</a>
+<%--                                <input type="submit" value="Add to Cart">--%>
                         </p>
                     </div>
                     <div id="wish-btn">
@@ -51,7 +51,7 @@
         %>
 
 </div>
-<form action="#" method="get">
+<form action="#" method="post">
     <label for="name-input"><b>Search by name</b></label>
     <input name="name" id="name-input"/>
     <button type="submit" id="search-btn" value="search">Search</button>

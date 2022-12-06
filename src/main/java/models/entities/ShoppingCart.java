@@ -3,7 +3,7 @@ package models.entities;
 public class ShoppingCart extends Products{
     private int quantity;
 
-   public ShoppingCart(){
+    public ShoppingCart(){
        super();
    }
 

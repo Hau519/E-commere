@@ -10,4 +10,8 @@ public class ProductAction {
     public static void getByName(HttpServletRequest request, String name){
         request.setAttribute(PRODUCT_PARAM, ProductManager.getProductByName(name));
     }
+
+    public static void getById(HttpServletRequest request, int id){
+        request.setAttribute(PRODUCT_PARAM, ProductManager.getProductById(id));
+    }
 }
