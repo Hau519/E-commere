@@ -35,21 +35,20 @@
 
         <tbody>
         <% if (cartList.isEmpty()){%>
-        <h2>Your cart is empty</h2>
+        <h1>Your cart is empty</h1>
         <%} else{%>
         <% for(ShoppingCart item: cartList){%>
         <div class="dd1">
             <tr class="cart-items">
-                <td><button type="button" class="btn btn-danger"> Remove</button></td>
+                <td><a href="Remove?index=<%=cartList.indexOf(item)%>">Remove</a></td>
                 <td><img src="img/<%= item.getName()%>.jpg" alt=""></td>
                 <td><%= item.getName()%></td>
                 <td class="price">$<%=item.getPrice()%>/<%=item.getUnit()%></td>
 
                 <td>
-<%--                    <input type='text' value='-' class='qtyminus minus' field='quantity' />--%>
+                    <a href="quantity?action=0&index=<%=cartList.indexOf(item)%>">-</a>
                     <input type="number" value="<%=item.getQuantity()%>" name="" class="quanity" readonly>
-                    <input type='button' value='+' class='qtyplus plus' field='quantity' />
-
+                    <a href="quantity?action=1&index=<%=cartList.indexOf(item)%>">+</a>
                 </td>
 
                 <td>$<%= formatter.format(item.getPrice()*item.getQuantity())%></td>
@@ -60,6 +59,7 @@
         }%>
         </tbody>
     </table>
+    <a href="${pageContext.request.contextPath}/products">Continue shopping</a>
 </section>
 
 <section id="cart-add" class="section-p1">
@@ -77,7 +77,7 @@
         <table>
             <tr>
                 <td>Cart Subtotal</td>
-                <td class="dooha"><%= formatter.format(total)%></td>
+                <td class="dooha">$<%= formatter.format(total)%></td>
             </tr>
             <tr>
                 <td>Shipping</td>
