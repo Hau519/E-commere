@@ -21,7 +21,7 @@
     <h4>About</h4>
     <a href="#" onclick="window.location.href='About.html';">About us</a>
     <a href="#" onclick="window.location.href='Contactus.html';">Contact us</a>
-    <a href="#">Privacy POlicy</a>
+    <a href="#">Privacy Policy</a>
     <a href="#">Terms & Conditions</a>
   </div>
 
@@ -45,7 +45,7 @@
   </div>
 
   <div class="copyright">
-    <p>©2022, HAYHMXITSOLUTIONS - E-Commerce Website</p>
+    <p>©2022, TEAM MARC-ANTOINE - Farm Fresh Website</p>
   </div>
 
 </footer>
