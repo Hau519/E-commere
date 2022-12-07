@@ -414,6 +414,56 @@ footer a:hover
     font-size: 13px;
 }
 
+.empty-title {
+    text-align: center;
+}
+
+#empty-bag {
+    width: 150px;
+    height: 127px;
+}
+
+#empty1 {
+    font-size: 30px;
+    color: black;
+}
+
+#empty2 {
+    font-size: 20px;
+    color: black;
+
+}
+
+#empty3 {
+    font-size: 15px;
+    color: black;
+
+}
+
+#empty4 {
+    font-size: 20px;
+    color: black;
+
+}
+
+.empty5 b {
+    text-decoration: red;
+    color: red;
+    font-size: 13px;
+    padding: 13px 35px 13px 35px;
+    text-transform: uppercase;
+    border: solid 1px red;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.empty5 b:hover{
+    background-color: lightpink;
+}
+
+/*----------------------------------*/
+
 
 .txtb{
     position : relative;

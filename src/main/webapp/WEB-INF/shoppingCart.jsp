@@ -20,6 +20,7 @@
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"/>
+
 <section id="cart" class="section-p1">
     <table width="100%" id="table1">
         <thead>
@@ -35,9 +36,26 @@
 
         <tbody>
         <% if (cartList.isEmpty()){%>
-        <h1>Your cart is empty</h1>
+        <div class="empty-title">
+            <p id="empty1">Your Farm Fresh Cart</p>
+            <br>
+            <img id="empty-bag" src="./img/empty-bag.png">
+            <br><br>
+            <p id="empty2"><b>Your cart is empty!</b></p>
+            <p id="empty3">Start adding items to your cart</p>
+            <p id="empty4"><b>Shop from</b></p>
+            <div class="empty-btn">
+            <p class="empty5"><a style="text-decoration: none" style="color: red;" href="${pageContext.request.contextPath}/products"><b>Our Product</b></a>
+            </p>
+            </div>
+            <br>
+
         <%} else{%>
         <% for(ShoppingCart item: cartList){%>
+            <br><br>
+        </div>
+
+
         <div class="dd1">
             <tr class="cart-items">
                 <td><a href="Remove?index=<%=cartList.indexOf(item)%>">Remove</a></td>
@@ -59,7 +77,7 @@
         }%>
         </tbody>
     </table>
-    <a href="${pageContext.request.contextPath}/products">Continue shopping</a>
+
 </section>
 
 <section id="cart-add" class="section-p1">
