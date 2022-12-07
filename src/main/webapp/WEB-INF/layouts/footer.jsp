@@ -4,7 +4,7 @@
   <div class="col">
     <img src="${pageContext.request.contextPath}/img/logo1.png" class="logo" height="100px" width="100px">
     <h4>Contact</h4>
-    <p><strong>Address: </strong>5110 Rue Buchan Montreal,QC Canada</p>
+    <p><strong>Address: </strong>2000 Saint-Catherine St W, Montreal, Quebec, Canada</p>
     <p><strong>Phone: </strong>+1(438)778-2242/+1(438)778-5555</p>
     <p><strong>Hours: </strong>09:00-18:00, Mon-Sat</p>
     <div class="follow">
@@ -21,7 +21,7 @@
     <h4>About</h4>
     <a href="#" onclick="window.location.href='About.html';">About us</a>
     <a href="#" onclick="window.location.href='Contactus.html';">Contact us</a>
-    <a href="#">Privacy POlicy</a>
+    <a href="#">Privacy Policy</a>
     <a href="#">Terms & Conditions</a>
   </div>
 
@@ -45,7 +45,7 @@
   </div>
 
   <div class="copyright">
-    <p>©2022, HAYHMXITSOLUTIONS - E-Commerce Website</p>
+    <p>©2022, TEAM MARC-ANTOINE - Farm Fresh Website</p>
   </div>
 
 </footer>
