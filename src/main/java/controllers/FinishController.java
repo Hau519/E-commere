@@ -3,9 +3,17 @@ package controllers;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import models.entities.Customer;
+import models.entities.Order;
+import models.managers.SendingEmailManager;
 
 import java.io.IOException;
-
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 @WebServlet(name = "ServletFinishController", value = "/finish")
 public class FinishController extends HttpServlet {
     @Override
@@ -18,7 +26,19 @@ public class FinishController extends HttpServlet {
             request.getRequestDispatcher("WEB-INF/checkout.jsp").forward(request, response);
         }
         else {
-            request.getRequestDispatcher("WEB-INF/finish.jsp").forward(request, response);
+            Customer user = (Customer) session.getAttribute("userLogin");
+            Order newOrder = (Order) session.getAttribute("newOrder");
+            SendingEmailManager sendEmail = new SendingEmailManager();
+
+            String emailContain = sendEmail.buildConfirmMessage(user, newOrder);
+
+            boolean test = sendEmail.sendEmail(user, emailContain);
+
+            if(!test){
+                request.getRequestDispatcher("WEB-INF/checkout.jsp").forward(request, response);
+            }else {
+                request.getRequestDispatcher("WEB-INF/finish.jsp").forward(request, response);
+            }
         }
     }
 

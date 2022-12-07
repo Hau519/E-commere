@@ -10,10 +10,13 @@
     <meta charset="utf-8">
     <title>Farm Fresh</title>
     <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
     <link rel="Shortcut Icon" href="img/miniapple.png" type="image/x-icon">
+
 </head>
 <body>
+<div class="wrapper">
 <jsp:include page="./layouts/header.jsp"/>
 <div id="page-container">
     <section>
@@ -58,6 +61,8 @@
 
 <jsp:include page="./layouts/footer.jsp"/>
 </div>
+</div>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/index.js"></script>
 </body>
 
 </html>
