@@ -16,10 +16,31 @@
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"></jsp:include>
+<br>
 
+<div class="name-input">
+    <form action="#" method="post">
+        <label for="name-input"><b>Search by name</b></label>
+        <input name="name" id="name-input"/>
+        <button type="submit" id="search-btn" value="search">Search</button>
+    </form>
+
+</div>
+
+<div class="cate-input">
+    <form action="#" method="post">
+        <label for="category-input"><b>Search by category</b></label>
+        <input name="category" id="category-input"/>
+        <button type="submit" id="filter-btn" value="filter">Filter</button>
+    </form>
+</div>
+
+<a href="${pageContext.request.contextPath}/products">All products</a>
+<h2>Our Products</h2>
+<br>
 <div class="products_container">
-    <br><br>
-    <h3>Our Products</h3>
+
+
         <%
             for (Map.Entry<Integer, Products> product : products.entrySet())
             { %>
@@ -51,24 +72,6 @@
         %>
 
 </div>
-<div>
-    <form action="#" method="post">
-        <label for="name-input"><b>Search by name</b></label>
-        <input name="name" id="name-input"/>
-        <button type="submit" id="search-btn" value="search">Search</button>
-    </form>
-</div>
-<div>
-    <form action="#" method="post">
-        <label for="category"><b>Filter by category</b></label>
-        <input name="category" id="category"/>
-        <button type="submit" id="filter" value="filter">Filter</button>
-    </form>
-</div>
-
-<a href="${pageContext.request.contextPath}/products">All products</a>
-
-
 <br>
 <jsp:include page="./layouts/footer.jsp"></jsp:include>
 

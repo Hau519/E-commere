@@ -4,7 +4,7 @@
   <div class="col">
     <img src="${pageContext.request.contextPath}/img/logo1.png" class="logo" height="100px" width="100px">
     <h4>Contact</h4>
-    <p><strong>Address: </strong>5110 Rue Buchan Montreal,QC Canada</p>
+    <p><strong>Address: </strong>2000 Saint-Catherine St W, Montreal, Quebec, Canada</p>
     <p><strong>Phone: </strong>+1(438)778-2242/+1(438)778-5555</p>
     <p><strong>Hours: </strong>09:00-18:00, Mon-Sat</p>
     <div class="follow">

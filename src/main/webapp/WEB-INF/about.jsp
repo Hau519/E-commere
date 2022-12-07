@@ -13,13 +13,13 @@
 <div id="header-img">
   <img src="img/header4.jpg" width="100%" height="400" alt="header">
   <div id="story-ad">
-    <p>How Farm Fresh started...</p>
+    <p>How we started our journey</p>
   </div>
 
   <section class="story1">
-    <img src="./img/story1.png" width="45%" height="450px">
+    <img src="./img/story1.png" width="50%" height="450px">
     <div class="story11">
-      <p>Our mission is to create a better food system.</p>
+      <p>Our mission is to create a better food system</p>
     </div>
     <div class="story111">
       <p>Every day, we deliver directly to our customers thousands of food baskets filled with our rooftop-grown veggies.
@@ -40,7 +40,7 @@
     </div>
 
     <div class="story2222">
-      <img src="./img/story2.png" width="45%" height="450px"></right>
+      <img src="./img/story2.png" width="50%" height="450px"></right>
 
     </div>
   </section>
@@ -48,7 +48,8 @@
     <div class="video-container ">
       <br>
       <h2><center>Farm Fresh is on Youtube!</center></h2>
-      <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Qw5vtdvuFLs?start=23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      <iframe id="iframe1" width="560" height="315" src="https://www.youtube.com/embed/Qw5vtdvuFLs?start=23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe id="iframe2" width="560" height="315" src="https://www.youtube.com/embed/_gnIwb2rJJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <br>
     </div>
     <section>
