@@ -1,5 +1,10 @@
-
+<%@ page import="models.entities.Customer" %>
+<%@ page import="models.entities.Order" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    Customer user = (Customer) session.getAttribute("userLogin");
+    Order newOrder = (Order) session.getAttribute("newOrder");
+%>
 
 <html>
 <head>

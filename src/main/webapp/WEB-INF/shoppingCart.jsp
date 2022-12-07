@@ -71,8 +71,8 @@
             <button class="normal">Apply</button>
         </div>
     </div>
-    <form action="${pageContext.request.contextPath}/checkout" id="subtotal">
-    <div >
+    <div id="subtotal">
+    <form action="${pageContext.request.contextPath}/checkout"  method="post">
         <h3>Cart Totals</h3>
         <table>
             <tr>
@@ -92,13 +92,13 @@
                 <td><strong  class="dooha3">$ <%=formatter.format(total*0.05)%></strong></td>
             </tr>
             <tr>
-                <td><strong>Total Including 14.75% Tax</strong></td>
-                <td><strong  class="dooha1" name="total">$ <%= formatter.format(total*1.1475)%></strong></td>
+                <td><strong>Total after Tax</strong></td>
+                <td><input type="text" name="total" value=<%= formatter.format(total*1.1475)%>></td>
             </tr>
         </table>
         <button class="normal" type="submit">Proceed to checkout</button>
-    </div>
     </form>
+    </div>
 </section>
 
 <jsp:include page="./layouts/footer.jsp"/>

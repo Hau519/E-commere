@@ -1,43 +1,53 @@
 package models.entities;
 
-public class Order {
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class Order{
     private int id;
-    private int productId;
+    private String orderNumber;
+    private ArrayList<ShoppingCart> productList;
     private int userId;
     private float total;
-    private String orderDate;
+    private LocalDate orderDate;
 
-    public Order(int id, int productId, int userId, float total, String orderDate) {
+    public Order(int id, ArrayList<ShoppingCart> productList, int userId, float total) {
         this.id = id;
-        this.productId = productId;
+        this.productList = productList;
         this.userId = userId;
         this.total = total;
-        this.orderDate = orderDate;
+        this.orderDate = java.time.LocalDate.now();
     }
 
-    public Order(int productId, int userId, float total) {
-        this.productId = productId;
+    public Order(String OrderNumber, ArrayList<ShoppingCart> productList, int userId, float total) {
+        this.orderNumber = OrderNumber;
+        this.productList = productList;
         this.userId = userId;
         this.total = total;
+        this.orderDate = java.time.LocalDate.now();
     }
 
     public int getId() {
         return id;
     }
 
-    public int getProductId() {
-        return productId;
-    }
-
     public int getUserId() {
         return userId;
+    }
+
+    public String getOrderNumber() {
+        return orderNumber;
+    }
+
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
     public float getTotal() {
         return total;
     }
 
-    public String getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
 
@@ -45,8 +55,12 @@ public class Order {
         this.id = id;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public ArrayList<ShoppingCart> getProductList() {
+        return productList;
+    }
+
+    public void setProductList(ArrayList<ShoppingCart> productList) {
+        this.productList = productList;
     }
 
     public void setUserId(int userId) {
@@ -57,7 +71,7 @@ public class Order {
         this.total = total;
     }
 
-    public void setOrderDate(String orderDate) {
+    public void setOrderDate(LocalDate orderDate) {
         this.orderDate = orderDate;
     }
 }

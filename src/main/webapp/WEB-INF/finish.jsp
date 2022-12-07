@@ -1,7 +1,9 @@
+<%@ page import="models.entities.Customer" %>
+<%@ page import="models.entities.Order" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%
-  String message = (String) request.getAttribute("message");
-
+  Customer user = (Customer) session.getAttribute("userLogin");
+  Order newOrder = (Order) session.getAttribute("newOrder");
 %>
 
 <!DOCTYPE html>
@@ -19,8 +21,8 @@
   <section>
     <div>
       <h1>Thank you! Your order is completed</h1>
-      <h2>Order number is: </h2>
-      <h3>You will be receiving a confirmation email with order details</h3>
+      <h2>Order number is: <%= newOrder.getOrderNumber()%> </h2>
+      <h3>You will be receiving a confirmation email to <%=user.getEmail()%> with order details</h3>
     </div>
   </section>
   <a href="${pageContext.request.contextPath}/products">Explore more products</a>

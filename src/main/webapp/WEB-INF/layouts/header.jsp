@@ -1,6 +1,13 @@
-<%@ page import="models.entities.Customer" %><%
-    String username = (String) session.getAttribute("username");
-    Customer userLogin = (Customer) session.getAttribute("userLogin");
+<%@ page import="models.entities.Customer" %>
+<%
+    String username="";
+    if(session.getAttribute("userLogin")==null){
+         username = "customer";
+    } else {
+        Customer userLogin = (Customer)session.getAttribute("userLogin");
+        username = userLogin.getFirstName();
+    }
+
 %>
 
 <div id="showcase">
@@ -14,7 +21,7 @@
                 <li><a href="${pageContext.request.contextPath}/home">Home</a></li>
                 <li><a href="${pageContext.request.contextPath}/about">Our Story</a></li>
                 <li><a href="${pageContext.request.contextPath}/products">Products</a></li>
-                <% if(userLogin==null){%>
+                <% if(session.getAttribute("userLogin")==null){%>
                 <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
                 <li><a href="${pageContext.request.contextPath}/register">Register</a></li>
                 <%} else{%>

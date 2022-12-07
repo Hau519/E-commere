@@ -10,7 +10,12 @@ import java.io.IOException;
 public class ProfileController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("WEB-INF/profile.jsp").forward(request, response);
+        HttpSession session = request.getSession();
+        if(session.getAttribute("userLogin")==null){
+            request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
+        }else {
+            request.getRequestDispatcher("WEB-INF/profile.jsp").forward(request, response);
+        }
     }
 
     @Override

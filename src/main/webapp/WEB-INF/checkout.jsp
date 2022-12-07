@@ -1,5 +1,9 @@
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="models.entities.Customer" %>
+<%@ page import="models.entities.Order" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%
+    Customer user = (Customer) session.getAttribute("userLogin");
+%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,11 +11,17 @@
     <meta charset="utf-8">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
-    <link rel="Shortcut Icon" href="img/miniapple.png" type="image/x-icon">
+    <link rel="Shortcut Icon" href="${pageContext.request.contextPath}/img/miniapple.png" type="image/x-icon">
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"/>
-
+<%
+    if(session.getAttribute("userLogin")==null){
+%>
+<h1>Please log in to continue</h1>
+<a href="${pageContext.request.contextPath}/login">Go to Login</a>
+<a href="${pageContext.request.contextPath}/cart">Come back to shopping cart</a>
+<%} else{%>
 <div>
     <div>
         <h1>Checkout</h1>
@@ -19,7 +29,7 @@
         <div class="delivery">
                 <h2>Billing Address</h2>
                 <label for="fname"> Full Name</label>
-                <input type="text" id="fname" name="fullname" placeholder="Enter your full name">
+                <input type="text" id="fname" name="fullname" placeholder=<%=user.getFirstName()+" "+user.getLastName()%>>
             <br>
                 <label for="address"> Address</label>
                 <input type="text" id="address" name="address" placeholder="123 Lasalle Street">
@@ -61,7 +71,7 @@
         <a href="${pageContext.request.contextPath}/finish">Pay</a>
     </div>
 </div>
-
+<% }%>
 <jsp:include page="./layouts/footer.jsp"/>
 </body>
 

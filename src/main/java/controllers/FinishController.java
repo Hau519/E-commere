@@ -10,7 +10,16 @@ import java.io.IOException;
 public class FinishController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("WEB-INF/finish.jsp").forward(request, response);
+        HttpSession session = request.getSession();
+        session.removeAttribute("cartList");
+        if(session.getAttribute("userLogin")==null){
+            request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
+        }else if(session.getAttribute("newOrder")==null){
+            request.getRequestDispatcher("WEB-INF/checkout.jsp").forward(request, response);
+        }
+        else {
+            request.getRequestDispatcher("WEB-INF/finish.jsp").forward(request, response);
+        }
     }
 
 

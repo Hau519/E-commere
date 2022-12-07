@@ -26,7 +26,12 @@ public class LoginController extends HttpServlet {
                 Customer user = CustomerManager.getUserLogin(email, password);
                 if(user!=null){
                     session.setAttribute("userLogin", user);
-                    request.getRequestDispatcher("WEB-INF/home.jsp").forward(request, response);
+                    if(session.getAttribute("cartList")!=null){
+                        session.setAttribute("userLogin", user);
+                        request.getRequestDispatcher("WEB-INF/shoppingCart.jsp").forward(request, response);
+                    }else {
+                        request.getRequestDispatcher("WEB-INF/home.jsp").forward(request, response);
+                    }
                 } else {
                     request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
                 }

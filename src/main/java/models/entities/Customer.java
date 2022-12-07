@@ -8,7 +8,7 @@ public class Customer {
     private String password;
     private String email;
 
-    public Customer(int id, String firstName, String lastName, String phone, String password, String email){
+    public Customer(int id, String firstName, String lastName, String email, String phone, String password){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -16,7 +16,7 @@ public class Customer {
         this.email = email;
         this.password = password;
     }
-    public Customer(String firstName, String lastName, String phone, String password, String email){
+    public Customer(String firstName, String lastName, String email, String phone, String password){
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
