@@ -152,6 +152,29 @@ nav li {
     background-color:#7AA03B;
 }
 
+.headvideo-container{
+    width:100%;
+    margin:0 auto;
+}
+
+#header-video {
+    background:#dfdfdf;
+    position: relative;
+    width: 100%;
+    height: 75%;
+    padding-top: 56.25%;
+}
+
+#header-video iframe{
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
 /* Footer */
 footer {
     display: flex;
@@ -404,6 +427,13 @@ footer a:hover
     padding: 12px 20px;
 }
 
+#cuopon button:hover,
+#subtotal button:hover {
+    background-color:#7AA03B;
+}
+
+
+
 #subtotal {
     /*float: right;*/
     width: 50%;
@@ -473,6 +503,40 @@ footer a:hover
 .empty5 b:hover{
     background-color: lightpink;
 }
+
+.remove-btn b{
+
+    color: black;
+    background-color: white;
+    font-size: 11px;
+    padding: 5px 15px 5px 15px;
+    border: solid 1px dimgrey;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-btn b:hover{
+    background-color: lightgrey;
+}
+
+.con-btn{
+    text-align: right;
+}
+
+.con-btn b {
+    color: dimgrey;
+    background-color: white;
+    font-weight:bold;
+    font-size: 15px;
+    padding: 13px 35px 13px 35px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.con-btn b:hover{
+    color:orangered;
+}
+
 
 /*----------------------------------*/
 

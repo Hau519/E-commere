@@ -45,7 +45,7 @@
             <p id="empty3">Start adding items to your cart</p>
             <p id="empty4"><b>Shop from</b></p>
             <div class="empty-btn">
-            <p class="empty5"><a style="text-decoration: none" style="color: red;" href="${pageContext.request.contextPath}/products"><b>Our Product</b></a>
+            <p class="empty5"><a style="text-decoration: none" style="color: red;" href="${pageContext.request.contextPath}/products" target="_blank"><b>Our Product</b></a>
             </p>
             </div>
             <br>
@@ -58,27 +58,35 @@
 
         <div class="dd1">
             <tr class="cart-items">
-                <td><a href="Remove?index=<%=cartList.indexOf(item)%>">Remove</a></td>
+                <div id="remove-product">
+                    <td class="remove-btn"><a style="text-decoration: none" href="Remove?index=<%=cartList.indexOf(item)%>" style="color: inherit;"><b>Remove</b></a></td>
+                </div>
                 <td><img src="img/<%= item.getName()%>.jpg" alt=""></td>
                 <td><%= item.getName()%></td>
                 <td class="price">$<%=item.getPrice()%>/<%=item.getUnit()%></td>
 
                 <td>
-                    <a href="quantity?action=0&index=<%=cartList.indexOf(item)%>">-</a>
+                    <a href="quantity?action=0&index=<%=cartList.indexOf(item)%>" class='qtyminus minus'>-</a>
                     <input type="number" value="<%=item.getQuantity()%>" name="" class="quanity" readonly>
-                    <a href="quantity?action=1&index=<%=cartList.indexOf(item)%>">+</a>
+                    <a href="quantity?action=1&index=<%=cartList.indexOf(item)%>" class='qtyplus plus'>+</a>
                 </td>
 
                 <td>$<%= formatter.format(item.getPrice()*item.getQuantity())%></td>
                 <% total = total + item.getQuantity()*item.getPrice();%>
             </tr>
         </div>
+
         <%}
         }%>
         </tbody>
     </table>
 
 </section>
+
+<div class="con-btn">
+    <p class="continue-btn"><a style="color: inherit;" href="${pageContext.request.contextPath}/products" target="_blank"><b>Continue shopping</b></a>
+    </p>
+</div>
 
 <section id="cart-add" class="section-p1">
 

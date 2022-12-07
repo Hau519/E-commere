@@ -20,14 +20,17 @@
 <jsp:include page="./layouts/header.jsp"/>
 <div id="page-container">
     <section>
-        <div id="header-img">
-            <img src="img/header4.jpg" width="100%" alt="header">
+        <div class="headvideo-container">
+        <div id="header-video">
+            <iframe src="https://www.youtube.com/embed/3pPStFyNRBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!--    <img src="img/header4.jpg" width="100%" alt="header">
             <div id="ad">
-                <p>Welcome to Farm Fresh</p>
+                <p>Welcome to Farm Fresh</p> -->
             </div>
         </div>
+</div>
         <div>
-            <p id="inseason">What's in Season</p>
+            <p id="inseason">Welcome to Farm Fresh</p>
             <div id="container">
                 <img src="img/vegetables.jpg" width="45%">
                 <div id="in-season1">Pre-order our products</div>
