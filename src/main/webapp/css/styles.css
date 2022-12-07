@@ -978,6 +978,42 @@ input.qtyminus { width:25px; height:25px;}
     text-align: right;
 }
 
+/* check out  */
+
+#plzlogin{
+    color: black;
+    text-align: center;
+
+}
+
+#gologin b {
+    border: solid 1px dimgrey;
+    padding: 10px 95px 10px 95px;
+    border-radius: 5px;
+    color: black;
+    background-color: whitesmoke;
+    font-weight:bold;
+    cursor: pointer;
+}
+#gologin b:hover {
+    background-color: lightgrey;
+}
+
+#gocart  b {
+    border: solid 1px dimgrey;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    color: black;
+    background-color: whitesmoke;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+#gocart b:hover {
+    background-color: lightgrey;
+}
+
+
 
 /*Home_page_resposive*/
 @media (max-width:799px) {
@@ -1015,7 +1051,3 @@ input.qtyminus { width:25px; height:25px;}
         padding-right: 15px;
     }
 
-
-
-
-}

@@ -15,13 +15,18 @@
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"/>
+
+
 <%
     if(session.getAttribute("userLogin")==null){
 %>
-<h1>Please log in to continue</h1>
-<a href="${pageContext.request.contextPath}/login">Go to Login</a>
-<a href="${pageContext.request.contextPath}/cart">Come back to shopping cart</a>
+<br><br><br>
+<h1 id="plzlogin">Please log in to continue</h1><br>
+<center><a style="text-decoration: none" href="${pageContext.request.contextPath}/login" id="gologin"><b>Go to Login</b></a></center><br><br>
+<center><a style="text-decoration: none" href="${pageContext.request.contextPath}/cart" id="gocart"><b>Come back to shopping cart</b></a></center><br>
 <%} else{%>
+
+
 <div>
     <div>
         <h1>Checkout</h1>
@@ -72,6 +77,7 @@
     </div>
 </div>
 <% }%>
+<br><br>
 <jsp:include page="./layouts/footer.jsp"/>
 </body>
 
