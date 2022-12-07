@@ -1,6 +1,7 @@
 package models.managers;
 
 import models.entities.Customer;
+import models.entities.Products;
 import org.intellij.lang.annotations.Language;
 import services.DBConnection;
 import java.sql.PreparedStatement;
@@ -14,6 +15,8 @@ public class CustomerManager {
     private static final String queryDisplay = "select * from customer";
     @Language("MySQL")
     private static final String queryInsert = "insert into customer(first_name, last_name, email, phone, password) values (?,?,?,?,?)";
+    @Language("MySQL")
+    private static final String querySearch = "select * from customer where lower(email) = ?";
     public static HashMap<Integer, Customer> getAll(){
         HashMap<Integer, Customer> result = new HashMap<>();
         try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(queryDisplay)){
@@ -51,5 +54,32 @@ public class CustomerManager {
         }finally {
             DBConnection.getInstance().close();
         }
+    }
+    public static Customer getUserLogin(String email, String password){
+        Customer user = new Customer();
+        try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(querySearch)){
+            preparedStatement.setString(1, email);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                if(resultSet.getString("password")==password){
+                    int id = resultSet.getInt("id");
+                    String fName = resultSet.getString("first_name");
+                    String lName = resultSet.getString("last_name");
+                    String phone = resultSet.getString("phone");
+                    user.setId(id);
+                    user.setEmail(email);
+                    user.setFirstName(fName);
+                    user.setLastName(lName);
+                    user.setPassword(password);
+                    user.setPhone(phone);
+                }
+
+            }
+        }catch(SQLException e){
+            throw new RuntimeException(e);
+        }finally {
+            DBConnection.getInstance().close();
+        }
+        return user;
     }
 }
