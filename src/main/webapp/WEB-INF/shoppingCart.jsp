@@ -64,12 +64,13 @@
                 <td><img src="img/<%= item.getName()%>.jpg" alt=""></td>
                 <td><%= item.getName()%></td>
                 <td class="price">$<%=item.getPrice()%>/<%=item.getUnit()%></td>
-
                 <td>
-                    <a href="quantity?action=0&index=<%=cartList.indexOf(item)%>" class='qtyminus minus'>-</a>
-                    <input type="number" value="<%=item.getQuantity()%>" name="" class="quanity" readonly>
-                    <a href="quantity?action=1&index=<%=cartList.indexOf(item)%>" class='qtyplus plus'>+</a>
+                  <a style="text-decoration: none" href="quantity?action=0&index=<%=cartList.indexOf(item)%>" id="qtyminus">-</a>&nbsp
+                    <input type="number" value="<%=item.getQuantity()%>" name="" class="quanity" readonly>&nbsp
+                    <a style="text-decoration: none" href="quantity?action=1&index=<%=cartList.indexOf(item)%>" id="qtyplus">+</a>
+
                 </td>
+
 
                 <td>$<%= formatter.format(item.getPrice()*item.getQuantity())%></td>
                 <% total = total + item.getQuantity()*item.getPrice();%>

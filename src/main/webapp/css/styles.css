@@ -537,8 +537,35 @@ footer a:hover
     color:orangered;
 }
 
+.quanity {
+    text-align: center;
+    width: 5px;
+    height: 3px;
+}
 
-/*----------------------------------*/
+#qtyminus {
+    border: solid 1px dimgrey;
+    font-weight:bold;
+    background-color: #ECFFDC;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 5px 5px 5px 5px;
+}
+
+#qtyplus {
+    border: solid 1px dimgrey;
+    background-color: #ECFFDC;
+    border-radius: 2px;
+    font-size: 11px;
+    padding: 5px 5px 5px 5px;
+}
+
+#qtyminus:hover,
+#qtyplus:hover {
+    background-color: lightgrey;
+}
+
+    /*----------------------------------*/
 
 
 .txtb{
