@@ -45,7 +45,7 @@
   </div>
 
   <div class="copyright">
-    <p>©2022, TEAM MARC-ANTOINE - Farm Fresh Website</p>
+    <p>©2022, TEAM GREAT MARC-ANTOINE - Farm Fresh site</p>
   </div>
 
 </footer>

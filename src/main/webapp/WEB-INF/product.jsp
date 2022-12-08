@@ -37,15 +37,16 @@
 
 <!--<a href="${pageContext.request.contextPath}/products">All products-->
 <div class="pro_txt">
-<h2><a href="${pageContext.request.contextPath}/products" style="color: inherit; text-decoration: none;">Our Products</a></h2>
+<!--<h2><a href="${pageContext.request.contextPath}/products" style="color: inherit; text-decoration: none;">Our Products</a></h2>-->
 </div>
+<br><br>
 <% if(session.getAttribute("loginRequireError")!=null){ %>
-<div class="bottom-text">
-    <h3 style="color: red">Please log in to add to wishlist</h3>
-    <p>Go to <a href='${pageContext.request.contextPath}/login' target="_blank"> <b> Log-in</b></a>
-</div>
+    <h1 id="plzlogin">Please log in to Add to wishlist</h1><br>
+    <center><a style="text-decoration: none" href="${pageContext.request.contextPath}/login" id="gologin"> <b>Go to Login</b></a></center><br><br>
+    <center><a style="text-decoration: none" href="${pageContext.request.contextPath}/products" id="conshop"><b>Continue shopping</b></a></center><br>
 <% session.removeAttribute("loginRequireError");}%>
-<br>
+
+<br><br>
 
 <div class="products_container">
 
@@ -62,13 +63,13 @@
                 <form id='quantity_form' class='quantity'>
                     <div id="add-product">
                         <p class="add-btn">
-                            <a href="${pageContext.request.contextPath}/cart?id=<%=product.getValue().getId()%>" id="add-btn" style="color: inherit; "><b>Add to cart</b></a>
+                            <a href="${pageContext.request.contextPath}/cart?id=<%=product.getValue().getId()%>" id="add-btn" style="color: inherit;"><b>Add to cart</b></a>
                         </p>
                     </div>
 
                     <div id="wish-btn">
                         <p class="wish-btn">
-                            <a href="${pageContext.request.contextPath}/wishlist?id=<%=product.getValue().getId()%>" ><b>Add to WishList</b></a>
+                            <a href="${pageContext.request.contextPath}/wishlist?id=<%=product.getValue().getId()%>" id="wish-bt" style="color: inherit;"><b>Add to WishList</b></a>
                         </p>
                     </div>
                 </form>

@@ -21,16 +21,13 @@
 <div id="page-container">
     <section>
         <div class="headvideo-container">
-        <div id="header-video">
-            <iframe src="https://www.youtube.com/embed/3pPStFyNRBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <!--    <img src="img/header4.jpg" width="100%" alt="header">
+        <img src="img/header4.jpg" width="100%" alt="header">
             <div id="ad">
-                <p>Welcome to Farm Fresh</p> -->
-            </div>
+                <p>Welcome to Farm Fresh</p>
         </div>
 </div>
         <div>
-            <p id="inseason">Welcome to Farm Fresh</p>
+            <p id="inseason">What is in season</p>
             <div id="container">
                 <img src="${pageContext.request.contextPath}/img/vegetables.jpg" width="45%">
                 <div id="in-season1">Pre-order our products</div>

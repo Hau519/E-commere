@@ -783,7 +783,29 @@ input.qtyminus { width:25px; height:25px;}
     background-color:orangered;
 }
 
-.wish-btn [type="submit"] {
+#wish-btn {
+    margin-top: 17%;
+    margin-bottom: 15%;
+}
+
+#wish-bt b {
+
+    color: white;
+    background-color: darkseagreen;
+    font-weight:bold;
+    font-size: 13px;
+    padding: 13px 20px 13px 20px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#wish-bt b:hover{
+    background-color: #FF6347;
+}
+
+/*.wish-btn [type="submit"] {
     width: 79.5%;
     height: 45px;
     color: white;
@@ -800,7 +822,7 @@ input.qtyminus { width:25px; height:25px;}
 
 .wish-btn [type="submit"]:hover{
     background-color: #FF6347;
-}
+} */
 
 .name-input{
     left: 75%;
@@ -868,6 +890,21 @@ input.qtyminus { width:25px; height:25px;}
 #filter-btn:hover{
     background-color: lightgrey;
 }
+
+#conshop b {
+    border: solid 1px dimgrey;
+    padding: 10px 35px 10px 35px;
+    border-radius: 5px;
+    color: black;
+    background-color: whitesmoke;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+#conshop b:hover {
+    background-color: lightgrey;
+}
+
 
 /* Our Story */
 
