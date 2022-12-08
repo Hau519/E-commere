@@ -3,7 +3,6 @@ package controllers;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-import models.action.ProductAction;
 import models.entities.Products;
 import models.entities.ShoppingCart;
 import models.managers.ProductManager;
@@ -37,7 +36,7 @@ public class CartController extends HttpServlet {
                 for (ShoppingCart itemInCart : cartList) {
                     if (itemInCart.getId() == id) {
                         already = true;
-                        itemInCart.setQuantity(itemInCart.getQuantity() + 1);
+                        session.setAttribute("itemInCart", true);
                     }
                 }
                 if (!already) {
@@ -45,10 +44,7 @@ public class CartController extends HttpServlet {
                 }
                 session.setAttribute("cartList", cartList);
             }
-        }else{
-
         }
-
         request.getRequestDispatcher("WEB-INF/shoppingCart.jsp").forward(request, response);
     }
 }

@@ -12,10 +12,10 @@
 <head>
     <title>Product</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
-    <link rel="Shortcut Icon" href="img/miniapple.png" type="image/x-icon">
+    <link rel="Shortcut Icon" href="${pageContext.request.contextPath}/img/miniapple.png" type="image/x-icon">
 </head>
 <body>
-<jsp:include page="./layouts/header.jsp"></jsp:include>
+<jsp:include page="./layouts/header.jsp"/>
 <br><br>
 
 <div class="name-input">
@@ -53,14 +53,9 @@
                 <p class="price"><%= product.getValue().getPrice() %> per <%= product.getValue().getUnit() %> </p>
                 <p class="description"><%= product.getValue().getDescription() %></p>
                 <form id='quantity_form' class='quantity'>
-<%--                    <input type='button' value='-' class='qtyminus minus' field='quantity' />--%>
-<%--                    <input type='number' name='quantity' value='0' class='qty'/>--%>
-<%--                    <input type='button' value='+' class='qtyplus plus' field='quantity' />--%>
-
                     <div id="add-product">
                         <p class="add-btn">
                             <a href="${pageContext.request.contextPath}/cart?id=<%=product.getValue().getId()%>" id="add-btn" style="color: inherit; "><b>Add to cart</b></a>
-<%--                                <input type="submit" value="Add to Cart">--%>
                         </p>
                     </div>
 
@@ -76,7 +71,7 @@
 
 </div>
 <br>
-<jsp:include page="./layouts/footer.jsp"></jsp:include>
+<jsp:include page="./layouts/footer.jsp"/>
 
 </body>
 </html>

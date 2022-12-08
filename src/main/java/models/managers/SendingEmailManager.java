@@ -16,13 +16,13 @@ public class SendingEmailManager {
 
     public String buildConfirmMessage(Customer user, Order order){
         String greeting = "Dear " + user.getFirstName() + " !\n\n";
-        String thankMessage = "Thank you for your order number: "+ order.getOrderNumber() + ".\nYour order details are as follow: \n";
-        String orderDetails = "\nOrder number: " + order.getOrderNumber() + ".\nTotal amount: $"+ order.getTotal()+ ".\nDate of order: "+ order.getOrderDate();
+        String thankMessage = "Thank you for shopping with us!"+ "\n\nYour order details are as follow: \n";
+        String orderDetails = "Order number: " + order.getOrderNumber() + ".\nTotal amount: $"+ order.getTotal()+ ".\nDate of order: "+ order.getOrderDate();
         String goodbye = "\n\nYour order will be deliver within 24 hours. \n\nKindest regards, Thank you!\n\n From FarmFresh with love!";
         return greeting + thankMessage + orderDetails + goodbye;
     }
 
-    public boolean sendEmail(Customer user, String emailContain) {
+    public boolean sendEmail(Customer user, String emailContain, String emailSubject) {
         boolean test = false;
         String to = user.getEmail();
 
@@ -57,7 +57,7 @@ public class SendingEmailManager {
 
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
-            message.setSubject("Confirmation of your order!");
+            message.setSubject(emailSubject);
 
             message.setText(emailContain);
 

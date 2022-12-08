@@ -16,6 +16,7 @@ public class LogOutController extends HttpServlet {
         session.removeAttribute(Integer.toString(user.getId()));
         session.removeAttribute("userLogin");
         session.removeAttribute("newOrder");
+        session.removeAttribute("cartList");
         request.getRequestDispatcher("WEB-INF/home.jsp").forward(request, response);
     }
 

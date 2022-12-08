@@ -11,10 +11,7 @@ import java.io.IOException;
 public class ProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
         ProductAction.getAll(request);
-
         request.getRequestDispatcher("WEB-INF/product.jsp").forward(request,response);
     }
 

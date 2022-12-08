@@ -11,9 +11,9 @@
 <head>
   <meta charset="utf-8">
   <title>Farm Fresh</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
-  <link rel="Shortcut Icon" href="img/miniapple.png" type="image/x-icon">
+  <link rel="Shortcut Icon" href="${pageContext.request.contextPath}/img/miniapple.png" type="image/x-icon">
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"/>

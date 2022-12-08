@@ -9,10 +9,10 @@
 <head>
     <meta charset="utf-8">
     <title>Farm Fresh</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
-    <link rel="Shortcut Icon" href="img/miniapple.png" type="image/x-icon">
+    <link rel="Shortcut Icon" href="${pageContext.request.contextPath}/img/miniapple.png" type="image/x-icon">
 
 </head>
 <body>
@@ -32,7 +32,7 @@
         <div>
             <p id="inseason">Welcome to Farm Fresh</p>
             <div id="container">
-                <img src="img/vegetables.jpg" width="45%">
+                <img src="${pageContext.request.contextPath}/img/vegetables.jpg" width="45%">
                 <div id="in-season1">Pre-order our products</div>
                 <div id="pre-order">
                     <p class="order-btn">
@@ -41,19 +41,19 @@
                 </div>
                 <div class="box">
                     <div class="in-season">
-                        <img src="./img/spring.jpg" width="95%" height="80%">
+                        <img src="${pageContext.request.contextPath}/img/spring.jpg" width="95%" height="80%">
                         <p class="season-1">Spring</p>
                     </div>
                     <div class="in-season">
-                        <img src="./img/summer.jpg" width="95%" height="80%">
+                        <img src="${pageContext.request.contextPath}/img/summer.jpg" width="95%" height="80%">
                         <p class="season-2">Summer</p>
                     </div>
                     <div class="in-season">
-                        <img src="./img/winter.jpg" width="95%" height="80%">
+                        <img src="${pageContext.request.contextPath}/img/winter.jpg" width="95%" height="80%">
                         <p class="season-3">Winter</p>
                     </div>
                     <div class="in-season">
-                        <img src="./img/automn.jpg" width="95%" height="80%">
+                        <img src="${pageContext.request.contextPath}/img/automn.jpg" width="95%" height="80%">
                         <p class="season-4">Autumn</p>
                     </div>
                 </div>

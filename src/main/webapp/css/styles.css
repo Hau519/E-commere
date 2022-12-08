@@ -1013,6 +1013,11 @@ input.qtyminus { width:25px; height:25px;}
     background-color: lightgrey;
 }
 
+.error{
+    color: red !important;
+    text-align: center;
+}
+
 
 
 /*Home_page_resposive*/
@@ -1028,7 +1033,7 @@ input.qtyminus { width:25px; height:25px;}
         height: 100vh;
         width: 300px;
         background-color: #94C348;
-        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
         padding: 80px 0 0 10px;
         transition: 0.3s;
     }
@@ -1036,6 +1041,7 @@ input.qtyminus { width:25px; height:25px;}
     nav ul.active {
         right: 0;
     }
+
     nav li {
         margin-bottom: 25px;
     }
@@ -1050,4 +1056,5 @@ input.qtyminus { width:25px; height:25px;}
         padding-left: 15px;
         padding-right: 15px;
     }
+}
 

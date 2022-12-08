@@ -1,11 +1,11 @@
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 
 <html>
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
-    <link rel="Shortcut Icon" href="img/miniapple.png" type="image/x-icon">
+    <link rel="Shortcut Icon" href="${pageContext.request.contextPath}/img/miniapple.png" type="image/x-icon">
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"/>

@@ -18,7 +18,6 @@ public class RemoveController extends HttpServlet {
             int index= Integer.parseInt(request.getParameter("index"));
             cartList.remove(index);
         }
-
         request.getRequestDispatcher("WEB-INF/shoppingCart.jsp").forward(request, response);
     }
 

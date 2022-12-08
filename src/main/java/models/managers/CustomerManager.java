@@ -15,7 +15,10 @@ public class CustomerManager {
     @Language("MySQL")
     private static final String queryInsert = "insert into customer(first_name, last_name, email, phone, password) values (?,?,?,?,?)";
     @Language("MySQL")
-    private static final String querySearch = "select * from customer where email = ? and password = ?";
+    private static final String queryCheckLogin = "select * from customer where email = ? and password = ?";
+
+    @Language("MySQL")
+    private static final String querySearchEmail = "select * from customer where email = ?";
     public static HashMap<Integer, Customer> getAll(){
         HashMap<Integer, Customer> result = new HashMap<>();
         try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(queryDisplay)){
@@ -56,7 +59,7 @@ public class CustomerManager {
     }
     public static Customer getUserLogin(String email, String password){
         Customer user = null;
-        try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(querySearch)){
+        try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(queryCheckLogin)){
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -73,5 +76,20 @@ public class CustomerManager {
             DBConnection.getInstance().close();
         }
         return user;
+    }
+
+    public static Boolean checkEmail(String email){
+        try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(querySearchEmail)){
+            preparedStatement.setString(1, email);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                return true;
+            }
+        }catch(SQLException e){
+            throw new RuntimeException(e);
+        }finally {
+            DBConnection.getInstance().close();
+        }
+        return false;
     }
 }

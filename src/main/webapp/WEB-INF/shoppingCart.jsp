@@ -85,7 +85,7 @@
 </section>
 
 <div class="con-btn">
-    <p class="continue-btn"><a style="color: inherit;" href="${pageContext.request.contextPath}/products" target="_blank"><b>Continue shopping</b></a>
+    <p class="continue-btn"><a style="color: inherit;" href="${pageContext.request.contextPath}/products"><b>Continue shopping</b></a>
     </p>
 </div>
 

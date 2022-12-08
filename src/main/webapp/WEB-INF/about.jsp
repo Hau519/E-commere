@@ -6,18 +6,18 @@
   <meta charset="utf-8">
   <title>Our Story</title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
-  <link rel="Shortcut Icon" href="img/miniapple.png" type="image/x-icon">
+  <link rel="Shortcut Icon" href="${pageContext.request.contextPath}/img/miniapple.png" type="image/x-icon">
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"/>
 <div id="header-img">
-  <img src="img/header4.jpg" width="100%" height="400" alt="header">
+  <img src="${pageContext.request.contextPath}/img/header4.jpg" width="100%" height="400" alt="header">
   <div id="story-ad">
     <p>How we started our journey</p>
   </div>
 
   <section class="story1">
-    <img src="./img/story1.png" width="50%" height="450px">
+    <img src="${pageContext.request.contextPath}/img/story1.png" width="50%" height="450px">
     <div class="story11">
       <p>Our mission is to create a better food system</p>
     </div>
@@ -40,7 +40,7 @@
     </div>
 
     <div class="story2222">
-      <img src="./img/story2.png" width="50%" height="450px"></right>
+      <img src="${pageContext.request.contextPath}/img/story2.png" width="50%" height="450px"></right>
 
     </div>
   </section>

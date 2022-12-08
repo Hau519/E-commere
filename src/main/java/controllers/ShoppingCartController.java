@@ -14,8 +14,6 @@ public class ShoppingCartController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        HttpSession session = request.getSession();
-
         request.getRequestDispatcher("WEB-INF/shoppingCart.jsp").forward(request, response);
     }
 }
