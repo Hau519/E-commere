@@ -29,7 +29,8 @@
 
 <div>
     <div>
-        <h1>Checkout</h1>
+        <br>
+        <center><h1 id="cyo">Complete your order</h1></center>
 
         <div class="delivery">
                 <h2>Billing Address</h2>

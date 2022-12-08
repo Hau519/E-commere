@@ -893,7 +893,7 @@ input.qtyminus { width:25px; height:25px;}
 
 #conshop b {
     border: solid 1px dimgrey;
-    padding: 10px 35px 10px 35px;
+    padding: 10px 65px 10px 65px;
     border-radius: 5px;
     color: black;
     background-color: whitesmoke;
@@ -1055,7 +1055,38 @@ input.qtyminus { width:25px; height:25px;}
     text-align: center;
 }
 
+#cyo{
+    color: black;
+}
 
+.login-form{
+    padding-left: 10px;
+    padding-top: 180px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 0 auto;
+    height: 950px;
+    display: inline-block;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.log_form{
+    width : 400px;
+    background-color : #f1f1f1;
+    height : 380px;
+    padding : 60px 40px;
+    margin: 95px auto;
+    border-radius: 10px;
+    border:  solid #848383 1px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.log_form h2{
+    text-align:center;
+    margin-bottom : 30px;
+    color : #08AEEA;
+    font-size: 30px;
+}
 
 /*Home_page_resposive*/
 @media (max-width:799px) {

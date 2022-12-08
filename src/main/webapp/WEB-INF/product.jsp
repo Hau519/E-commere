@@ -37,9 +37,9 @@
 
 <!--<a href="${pageContext.request.contextPath}/products">All products-->
 <div class="pro_txt">
-<!--<h2><a href="${pageContext.request.contextPath}/products" style="color: inherit; text-decoration: none;">Our Products</a></h2>-->
+<h2><a href="${pageContext.request.contextPath}/products" style="color: inherit; text-decoration: none;">Our Products</a></h2>
 </div>
-<br><br>
+<br>
 <% if(session.getAttribute("loginRequireError")!=null){ %>
     <h1 id="plzlogin">Please log in to Add to wishlist</h1><br>
     <center><a style="text-decoration: none" href="${pageContext.request.contextPath}/login" id="gologin"> <b>Go to Login</b></a></center><br><br>
