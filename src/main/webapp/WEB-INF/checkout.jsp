@@ -44,16 +44,14 @@
                     <label for="postcode">Post code : </label>
                     <input type="text" id="postcode" name="postcode" placeholder="A1B2CD">
                 </div>
-            </div>
+                </div>
 
 
         <div class="payment-method">
             <h2>Payment method</h2>
             <label for="card" class="method card">
-                <div class="card-logos">
-                    <img style="width: 20%" src="${pageContext.request.contextPath}/img/pay.jpg"/>
+                    <img src="${pageContext.request.contextPath}/img/pay.jpg"/>
                     <!--<img src="${pageContext.request.contextPath}/img/mastercard_logo.png"/>-->
-                </div>
 
                 <div class="radio-input">
                     <input id="card" type="radio" name="payment">
@@ -62,19 +60,21 @@
             </label>
 
             <label for="paypal" class="method paypal">
-                <img style="width: 20%" src="${pageContext.request.contextPath}/img/paypal_logo.png"/>
+                <img style="width: 25%" src="${pageContext.request.contextPath}/img/Paypallogopng.png"/>
                 <div class="radio-input">
                     <input id="paypal" type="radio" name="payment">
                     Pay with PayPal
                 </div>
             </label>
         </div>
-    </div>
-        </div>
+            </div>
+
+
 
     <div class="panel-footer">
-        <a href="${pageContext.request.contextPath}/cart">Go back to shopping cart</a>
-        <a href="${pageContext.request.contextPath}/finish">Pay</a>
+        <a style="text-decoration: none" href="${pageContext.request.contextPath}/finish" id="gofin"><b>Pay Now</b></a><br><br><br>
+        <a style="text-decoration: none" href="${pageContext.request.contextPath}/cart" id="gocart"><b>Come back to shopping cart</b></a>
+
     </div>
 
 <% }%>

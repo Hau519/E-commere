@@ -1062,12 +1062,12 @@ input.qtyminus { width:25px; height:25px;}
 
 .deli_form {
     width : 400px;
-    height : 600px;
+    height : 565px;
     background-color : white;
-    padding : 1px 35px 10px 35px;
+    padding : 10px 35px;
     margin: 50px auto;
     border-radius: 5px;
-    border:  solid dimgrey 1px;
+    border:  solid darkgrey 1px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -1082,6 +1082,30 @@ input.qtyminus { width:25px; height:25px;}
     width: 1200px;
 }
 
+#card {
+    margin-bottom: 20px;
+}
+
+.payment-method {
+    text-align: center;
+}
+.panel-footer {
+    text-align: center;
+}
+
+#gofin b{
+    border: solid 1px dimgrey;
+    padding: 10px 105px 10px 105px;
+    border-radius: 5px;
+    color: black;
+    background-color: whitesmoke;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+#gofin b:hover {
+    background-color: lightgrey;
+}
 
 /*Home_page_resposive*/
 @media (max-width:799px) {
