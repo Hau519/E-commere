@@ -26,34 +26,33 @@
 <center><a style="text-decoration: none" href="${pageContext.request.contextPath}/cart" id="gocart"><b>Come back to shopping cart</b></a></center><br>
 <%} else{%>
 
-
-<div>
-    <div>
         <br>
         <center><h1 id="cyo">Complete your order</h1></center>
 
-        <div class="delivery">
+            <div class="deli_form">
+                <div class="txtb">
                 <h2>Billing Address</h2>
-                <label for="fname"> Full Name</label>
+                <label for="fname"> Full Name : </label>
                 <input type="text" id="fname" name="fullname" placeholder=<%=user.getFirstName()+" "+user.getLastName()%>>
             <br>
-                <label for="address"> Address</label>
+                <label for="address"> Address : </label>
                 <input type="text" id="address" name="address" placeholder="123 Lasalle Street">
             <br>
-            <label for="city"> City</label>
+            <label for="city"> City : </label>
                 <input type="text" id="city" name="city" placeholder="Montreal">
                 <div class="col-50">
-                    <label for="postcode">Post code</label>
+                    <label for="postcode">Post code : </label>
                     <input type="text" id="postcode" name="postcode" placeholder="A1B2CD">
                 </div>
-        </div>
+            </div>
+
 
         <div class="payment-method">
             <h2>Payment method</h2>
             <label for="card" class="method card">
                 <div class="card-logos">
-                    <img style="width: 20%" src="${pageContext.request.contextPath}/img/visa_logo.png"/>
-                    <img src="${pageContext.request.contextPath}/img/mastercard_logo.png"/>
+                    <img style="width: 20%" src="${pageContext.request.contextPath}/img/pay.jpg"/>
+                    <!--<img src="${pageContext.request.contextPath}/img/mastercard_logo.png"/>-->
                 </div>
 
                 <div class="radio-input">
@@ -71,12 +70,13 @@
             </label>
         </div>
     </div>
+        </div>
 
     <div class="panel-footer">
         <a href="${pageContext.request.contextPath}/cart">Go back to shopping cart</a>
         <a href="${pageContext.request.contextPath}/finish">Pay</a>
     </div>
-</div>
+
 <% }%>
 <br><br>
 <jsp:include page="./layouts/footer.jsp"/>
