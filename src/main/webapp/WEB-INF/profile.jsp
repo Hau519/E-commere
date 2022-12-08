@@ -31,8 +31,6 @@
         <label>Phone number:</label>
         <p><%= user.getPhone()%></p>
 
-        <!--<h2>Order number is: <%= newOrder.getOrderNumber()%> </h2>-->
-
     <div class="=wishList">
         <section id="cart" class="section-p1">
             <table id="table1">

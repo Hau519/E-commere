@@ -25,7 +25,7 @@
                     </div>
                     <input type='submit' class='login_btn' value='LOG IN'>
                     <div class="bottomtext">
-                        <p>Don't have an account? <a href='${pageContext.request.contextPath}/register' target="_blank"><b> Register here!</b></a></p>
+                        <p>Don't have an account? <a href='${pageContext.request.contextPath}/register'><b> Register here!</b></a></p>
                     </div>
                 </form>
             </div>
