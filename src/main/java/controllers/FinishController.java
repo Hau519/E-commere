@@ -7,6 +7,7 @@ import models.entities.Customer;
 import models.entities.Order;
 import models.managers.SendingEmailManager;
 import java.io.IOException;
+import java.util.ArrayList;
 
 @WebServlet(name = "ServletFinishController", value = "/finish")
 public class FinishController extends HttpServlet {

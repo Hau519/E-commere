@@ -45,7 +45,7 @@
             <p id="empty3">Start adding items to your cart</p>
             <p id="empty4"><b>Shop from</b></p>
             <div class="empty-btn">
-            <p class="empty5"><a style="text-decoration: none" style="color: red;" href="${pageContext.request.contextPath}/products" target="_blank"><b>Our Product</b></a>
+            <p class="empty5"><a style="text-decoration: none" style="color: red;" href="${pageContext.request.contextPath}/products"><b>Our Product</b></a>
             </p>
             </div>
             <br>

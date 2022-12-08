@@ -28,8 +28,8 @@
                         <label>Last name* : </label>
                         <input type="text" placeholder='Please enter your last name.' name="lName" required pattern="[a-zA-Z]+$" title="Contain only alphabet characters">
 
-                        <label>Enter your date of birth* : </label>
-                        <input type="text" placeholder="yyyy-mm-dd" name="dob" pattern="(?:19|20)(?:[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:29|30))|(?:(?:0[13578]|1[02])-31))|(?:[13579][26]|[02468][048])-02-29)" required title="Format yyyy-mm-dd">
+<%--                        <label>Enter your date of birth* : </label>--%>
+<%--                        <input type="text" placeholder="yyyy-mm-dd" name="dob" pattern="(?:19|20)(?:[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:29|30))|(?:(?:0[13578]|1[02])-31))|(?:[13579][26]|[02468][048])-02-29)" required title="Format yyyy-mm-dd">--%>
 
                         <label>Enter your phone number* : </label>
                         <input type="tel" placeholder='Please enter your phone number. ' name="phone" required>

@@ -19,9 +19,9 @@
                 <form action="${pageContext.request.contextPath}/login" method="post">
                     <div class="txtb">
                         <label>Email : </label><span class="error"></span>
-                        <input type="email" placeholder='Please enter your e-mail. ' name="email">
+                        <input type="email" placeholder='Please enter your e-mail. ' name="email" required>
                         <label>Password : </label><span class="error"></span>
-                        <input type="password" placeholder='Please enter your password.' name="password">
+                        <input type="password" placeholder='Please enter your password.' name="password" required>
                     </div>
                     <input type='submit' class='login_btn' value='LOG IN'>
                     <div class="bottomtext">

@@ -6,7 +6,7 @@
 
 <%
     HashMap<Integer, Products> products = (HashMap<Integer, Products>) request.getAttribute(ProductAction.PRODUCT_PARAM);
-    if (products == null) products = new HashMap<>(); // So that it is not null, but empty
+    if (products == null) products = new HashMap<>();
 %>
 <html>
 <head>
@@ -39,7 +39,14 @@
 <div class="pro_txt">
 <h2><a href="${pageContext.request.contextPath}/products" style="color: inherit; text-decoration: none;">Our Products</a></h2>
 </div>
+<% if(session.getAttribute("loginRequireError")!=null){ %>
+<div class="bottom-text">
+    <h3 style="color: red">Please log in to add to wishlist</h3>
+    <p>Go to <a href='${pageContext.request.contextPath}/login' target="_blank"> <b> Log-in</b></a>
+</div>
+<% session.removeAttribute("loginRequireError");}%>
 <br>
+
 <div class="products_container">
 
 
@@ -61,7 +68,7 @@
 
                     <div id="wish-btn">
                         <p class="wish-btn">
-                            <input type="submit" value="Add to WishList">
+                            <a href="${pageContext.request.contextPath}/wishlist?id=<%=product.getValue().getId()%>" ><b>Add to WishList</b></a>
                         </p>
                     </div>
                 </form>
