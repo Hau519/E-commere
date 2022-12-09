@@ -23,20 +23,20 @@
 <body>
 <jsp:include page="./layouts/header.jsp"/>
 
-<div id="page-container">
+
     <div class="profileInformation">
-        <p>My Information</p>
-        <p id="proinfo"> <label>Name:</label>
+        <h3>My Information</h3>
+        <p id="proinfo"> <label>Name    :</label>
             <b><%= user.getFirstName() + " " + user.getLastName()%></b></p>
 
-        <p id="proinfo"> <label>Email:</label>
+        <p id="proinfo"> <label>Email    :</label>
             <b><%= user.getEmail()%></b></p>
 
-        <p id="proinfo"><label>Phone number:</label>
+        <p id="proinfo"><label>Phone number    :</label>
             <b><%= user.getPhone()%></b></p>
     </div>
 
-    <div class="=wishList">
+    <section class="wishList">
         <div class="prof-wish">
         <section id="cart" class="section-prof">
             <table id="table1">
@@ -53,7 +53,7 @@
                 <tbody>
 
                 <div class="empty-title">
-                    <p id="empty1">Your Farm Fresh WishList</p>
+                    <p id="empty1">Your WishList</p>
                     <br>
                     <% if (wishList.isEmpty()){%>
                     <img id="empty-bag" src="./img/empty-bag.png">
@@ -69,7 +69,7 @@
 
                     <%} else{%>
                     <% for(Products item: wishList){%>
-                    <br><br>
+
                 </div>
 
                 <div class="dd1">
@@ -78,7 +78,7 @@
                         <td><img src="img/<%= item.getName()%>.jpg" alt=""></td>
                         <td><%= item.getName()%></td>
                         <td class="price">$<%=item.getPrice()%>/<%=item.getUnit()%></td>
-                        <td class="remove-btn"><a href="${pageContext.request.contextPath}/cart?id=<%=item.getId()%>" id="add-btn" style="color: inherit; "><b>Add to cart</b></a></td>
+                        <td class="remove-btn"><a style="text-decoration: none" href="${pageContext.request.contextPath}/cart?id=<%=item.getId()%>" id="add-btn" style="color: inherit; "><b>Add to cart</b></a></td>
                     </tr>
                 </div>
 
@@ -89,17 +89,18 @@
 
         </section>
         </div>
-    </div>
-    <div class = "previousOrder">
-        <div class="products_container">
+    </section>
 
+<section class="prof-prev">
+    <div class = "previousOrder">
             <div class="empty-title">
-                <p id="empty1">Your previous order</p>
+                <p id="empty1">Your Previous Order</p>
                 <br>
                 <% if (orderList.isEmpty()){%>
                 <img id="empty-bag" src="./img/empty-bag.png">
                 <br><br>
-                <p id="empty2"><b>You don't have any order!</b></p>
+                <p id="empty2"><b>You don't have any order yet!</b></p>
+                <p id="empty3">Start adding items to your Cart</p>
                 <p id="empty4"><b>Shop from</b></p>
                 <div class="empty-btn">
                     <p class="empty5"><a style="text-decoration: none" style="color: red;" href="${pageContext.request.contextPath}/products"><b>Our Products</b></a>
@@ -109,13 +110,19 @@
 
                 <%} else{%>
                 <% for(Order order: orderList){%>
-                <p class="name">Order number: <%= order.getOrderNumber() %></p>
-                <p class="price">Total: $<%= order.getTotal() %></p>
-                <p class="description">Date: <%= order.getOrderDate() %></p>
-                <p>Product list: </p>
-                <table width="100%" style="border: #333333 solid">
+
+                <p class="prv">Order number: <%= order.getOrderNumber() %></p>
+                <p class="prv">Date: <%= order.getOrderDate() %></p>
+                <p class="prv-tt">Total: $<%= order.getTotal() %></p>
+
+
+                <!--<table width="100%" style="border: #333333 solid">
                     <thead style="border: #333333 solid">
-                    <tr style="border: #333333 solid">
+                    <tr style="border: #333333 solid">-->
+                <section id="cart" class="section-prof">
+                <table id="table1">
+                    <thead>
+                    <tr>
                         <td>Image</td>
                         <td>Product</td>
                         <td>Price</td>
@@ -123,9 +130,10 @@
                         <td>Total</td>
                     </tr>
                     </thead>
+
                     <% for(ShoppingCart itemBought: order.getProductList()){%>
-                    <tbody style="border: #333333 solid">
-                    <tr class="cart-items" style="border: #333333 solid">
+                    <!--<tbody style="border: #333333 solid">-->
+                    <tr class="cart-items">
                         <td><img src="img/<%= itemBought.getName()%>.jpg" alt="" width="20%"></td>
                         <td><%= itemBought.getName()%></td>
                         <td class="price">$<%=itemBought.getPrice()%>/<%=itemBought.getUnit()%></td>
@@ -138,9 +146,11 @@
                 }
             %>
             </table>
+                </section>
         </div>
     </div>
 </div>
+</section>
 
 <jsp:include page="./layouts/footer.jsp"/>
 </body>

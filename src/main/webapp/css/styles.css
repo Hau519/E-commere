@@ -285,7 +285,7 @@ footer a:hover
 .regi_form h2{
     text-align:center;
     margin-bottom : 30px;
-    color : #fd746c;
+    color : #FF5F1F;
     font-size: 30px;
 }
 
@@ -610,7 +610,7 @@ footer a:hover
 
 .signup_btn:hover{
     cursor: pointer;
-    background: #adadad;
+    background: #FF5F1F;
     clear: both;
 }
 
@@ -1111,38 +1111,74 @@ input.qtyminus { width:25px; height:25px;}
 
 .profileInformation {
     margin-top: 50px;
-    margin-left: 15px;
-    padding-left: 5px;
+    margin-left: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
     font-weight: bold;
-    color: dimgrey;
-    border: solid 1px grey;
+    color: #333333;
+    border: solid 1px lightgrey;
     width: 400px;
     border-radius: 5px;
-    background-color: whitesmoke;
+    background-color: ghostwhite;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
 
 }
+.profileInformation h3{
+    color: #333333;
+}
+.profileInformation p {
+    border-bottom: solid 2px lightgrey;
+}
+
 
 #proinfo b {
-    border-bottom: solid 2px #333333;
-    color: #333333;
+
+    color: dimgrey;
     top: 50%;
 }
 
-.wishlist{
-    padding-top: -50%;
+.wishList{
+    margin-left: 33%;
+    margin-top: -12.5%;
 }
 .prof-wish{
-    width: 65%;
+    width: 95%;
     position: relative;
-    border: solid 1px grey;
+    border: solid 1px lightgrey;
     text-align: center;
+    border-radius: 5px;
+    background-color: ghostwhite;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 
 }
 
-.section-prof {
-
+.prof-prev {
+    margin-left: 33%;
+    margin-top: 30px;
+    margin-bottom: 35px;
 }
 
+.previousOrder{
+    width: 95%;
+    position: relative;
+    border: solid 1px lightgrey;
+    text-align: center;
+    border-radius: 5px;
+    background-color: ghostwhite;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.prv {
+    color: #333333;
+}
+
+.prv-tt{
+    color: red;
+}
 
 /*Home_page_resposive*/
 @media (max-width:799px) {
