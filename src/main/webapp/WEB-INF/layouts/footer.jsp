@@ -19,17 +19,17 @@
 
   <div class="col">
     <h4>About</h4>
-    <a href="#" onclick="window.location.href='About.html';">About us</a>
-    <a href="#" onclick="window.location.href='Contactus.html';">Contact us</a>
+    <a href="${pageContext.request.contextPath}/about">About us</a>
+    <a href="#">Contact us</a>
     <a href="#">Privacy Policy</a>
     <a href="#">Terms & Conditions</a>
   </div>
 
   <div class="col">
-    <h4 onclick="window.location.href='lginpage.html';">My Account</h4>
-    <a href="#" onclick="window.location.href='';">Login</a>
-    <a href="#" onclick="window.location.href='shoppingcart.html';">View Cart</a>
-    <a href="#">My Wishlist</a>
+    <h4>My Account</h4>
+    <a href="${pageContext.request.contextPath}/login">Login</a>
+    <a href="${pageContext.request.contextPath}/cart">View Cart</a>
+    <a href="${pageContext.request.contextPath}/profile">My Wishlist</a>
     <a href="#">Help</a>
   </div>
 
@@ -45,7 +45,7 @@
   </div>
 
   <div class="copyright">
-    <p>©2022, TEAM GREAT MARC-ANTOINE - Farm Fresh site</p>
+    <p>&copy;2022, TEAM MARC-ANTOINE - Farm Fresh site</p>
   </div>
 
 </footer>

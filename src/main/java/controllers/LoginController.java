@@ -33,6 +33,7 @@ public class LoginController extends HttpServlet {
                         request.getRequestDispatcher("WEB-INF/home.jsp").forward(request, response);
                     }
                 } else {
+                    session.setAttribute("loginError", true);
                     request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
                 }
             } catch(Exception ex){

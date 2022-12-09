@@ -15,6 +15,9 @@
             <div class="log_form" >
                 <div>
                     <h2><b>Login</b></h2>
+                    <%if(session.getAttribute("loginError")!=null){ %>
+                    <h3 class="error">Wrong email or password!</h3>
+                    <%session.removeAttribute("loginError");}%>
                 </div>
                 <form action="${pageContext.request.contextPath}/login" method="post">
                     <div class="txtb">
