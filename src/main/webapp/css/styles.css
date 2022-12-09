@@ -1107,6 +1107,43 @@ input.qtyminus { width:25px; height:25px;}
     background-color: lightgrey;
 }
 
+/* profile */
+
+.profileInformation {
+    margin-top: 50px;
+    margin-left: 15px;
+    padding-left: 5px;
+    font-weight: bold;
+    color: dimgrey;
+    border: solid 1px grey;
+    width: 400px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+
+}
+
+#proinfo b {
+    border-bottom: solid 2px #333333;
+    color: #333333;
+    top: 50%;
+}
+
+.wishlist{
+    padding-top: -50%;
+}
+.prof-wish{
+    width: 65%;
+    position: relative;
+    border: solid 1px grey;
+    text-align: center;
+
+}
+
+.section-prof {
+
+}
+
+
 /*Home_page_resposive*/
 @media (max-width:799px) {
     nav ul {

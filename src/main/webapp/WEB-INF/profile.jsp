@@ -22,17 +22,23 @@
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"/>
+
 <div id="page-container">
     <div class="profileInformation">
-        <label>Name:</label>
-        <p><%= user.getFirstName() + " " + user.getLastName()%></p>
-        <label>Email:</label>
-        <p><%= user.getEmail()%></p>
-        <label>Phone number:</label>
-        <p><%= user.getPhone()%></p>
+        <p>My Information</p>
+        <p id="proinfo"> <label>Name:</label>
+            <b><%= user.getFirstName() + " " + user.getLastName()%></b></p>
+
+        <p id="proinfo"> <label>Email:</label>
+            <b><%= user.getEmail()%></b></p>
+
+        <p id="proinfo"><label>Phone number:</label>
+            <b><%= user.getPhone()%></b></p>
+    </div>
 
     <div class="=wishList">
-        <section id="cart" class="section-p1">
+        <div class="prof-wish">
+        <section id="cart" class="section-prof">
             <table id="table1">
                 <thead>
                 <tr>
@@ -52,8 +58,8 @@
                     <% if (wishList.isEmpty()){%>
                     <img id="empty-bag" src="./img/empty-bag.png">
                     <br><br>
-                    <p id="empty2"><b>You don't have anything in your wishlist!</b></p>
-                    <p id="empty3">Start adding items to your list</p>
+                    <p id="empty2"><b>Your wishlist is empty!</b></p>
+                    <p id="empty3">Start adding items to your wishlist</p>
                     <p id="empty4"><b>Shop from</b></p>
                     <div class="empty-btn">
                         <p class="empty5"><a style="text-decoration: none" style="color: red;" href="${pageContext.request.contextPath}/products"><b>Our Products</b></a>
@@ -65,6 +71,7 @@
                     <% for(Products item: wishList){%>
                     <br><br>
                 </div>
+
                 <div class="dd1">
                     <tr class="cart-items">
                         <td class="remove-btn" id="remove-product"><a style="text-decoration: none" href="Remove?action=1?&index=<%=wishList.indexOf(item)%>" style="color: inherit;"><b>Remove</b></a></td>
@@ -81,7 +88,7 @@
             </table>
 
         </section>
-
+        </div>
     </div>
     <div class = "previousOrder">
         <div class="products_container">
