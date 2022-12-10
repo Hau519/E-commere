@@ -16,7 +16,7 @@
 </head>
 <body>
 <jsp:include page="./layouts/header.jsp"/>
-<br>
+<br><br>
 
 <center><section class="ser-bar">
 <div class="name-input">
