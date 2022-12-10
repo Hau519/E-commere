@@ -20,12 +20,10 @@
 <jsp:include page="./layouts/header.jsp"/>
 <div id="page-container">
     <section>
-        <div class="headvideo-container">
         <img src="img/header4.jpg" width="100%" alt="header">
             <div id="ad">
                 <p>Welcome to Farm Fresh</p>
-        </div>
-</div>
+            </div>
         <div>
             <p id="inseason">What is in season</p>
             <div id="container">
@@ -33,7 +31,7 @@
                 <div id="in-season1">Pre-order our products</div>
                 <div id="pre-order">
                     <p class="order-btn">
-                        <input type="submit" value="Pre-Order">
+                        <a href="${pageContext.request.contextPath}/products"><input type="submit" value="Pre-Order"></a>
                     </p>
                 </div>
                 <div class="box">

@@ -20,7 +20,7 @@ public class DBConnection {
     private final String urlConnection = "jdbc:mysql://localhost:3306/Farm_db";
     private final String username = "root";
 
-    private final String password = "9831611Qaz*";
+    private final String password = "";
     private Connection connection = null;
 
     public PreparedStatement preparedQuery(@Language("MySQL")String query){
