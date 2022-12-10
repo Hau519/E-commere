@@ -18,16 +18,19 @@
 <body>
 <jsp:include page="./layouts/header.jsp"/>
 <div id="page-container">
-  <section>
-    <div>
+  <center><section>
+    <div class="fin-txt">
       <h1>Thank you! Your order is completed</h1>
       <h2>Order number is: <%= newOrder.getOrderNumber()%> </h2>
       <h3>You will be receiving a confirmation email to <%=user.getEmail()%> with order details</h3>
     </div>
-  </section>
-  <a href="${pageContext.request.contextPath}/products">Explore more products</a>
+  </section></center>
+  <br><br>
+  <div class="exp-more">
+    <a style="text-decoration: none" style="color: red;" href="${pageContext.request.contextPath}/products"><b>Explore more products</b></a>
+  </div>
 
-
+  <br><br>
   <jsp:include page="./layouts/footer.jsp"/>
 </div>
 </body>
