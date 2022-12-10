@@ -12,9 +12,10 @@ body {
 /* Navbar */
 
 nav ul {
-    margin: 0;
+
     padding: 0;
-    text-align:right;
+    text-align: right;
+    position: relative;
 }
 
 .header-container {
@@ -56,7 +57,7 @@ nav a {
 
 nav li {
     display: inline;
-    padding-right:115px;
+    padding-right: 70px;
 }
 
 /* Home */
@@ -181,6 +182,11 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #94C348;
+    position: relative;
+
+}
+
+.section-p1{
 
 }
 
@@ -290,7 +296,6 @@ footer a:hover
 }
 
 .login-form{
-    padding-left: 10px;
     padding-top: 180px;
     width: 100%;
     border-radius: 5px;
@@ -830,6 +835,7 @@ input.qtyminus { width:25px; height:25px;}
     margin-right: auto;
     display: table-cell;
     position: relative;
+
 }
 .cate-input{
     left: 10px;
@@ -928,16 +934,17 @@ input.qtyminus { width:25px; height:25px;}
 #iframe1{
     position: absolute;
     top: 55%;
-    left: 30%;
+    left: 25%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
+
 
 }
 
 #iframe2{
     position: absolute;
     top: 55%;
-    left: 70%;
+    left: 75%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
 
@@ -951,6 +958,7 @@ input.qtyminus { width:25px; height:25px;}
     transform: translate(-50%, -50%);
     color: white;
     font-size: 45px;
+
 }
 
 .story1{
@@ -966,17 +974,17 @@ input.qtyminus { width:25px; height:25px;}
 .story11{
     position: absolute;
     top: 25%;
-    left: 105%;
+    left: 75%;
     transform: translate(-50%, -50%);
     color: darkgreen;
     font-size: 30px;
-    width: 100%;
+    width: 40%;
 
 }
 
 .story111{
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 75%;
     transform: translate(-50%, -50%);
     color: dimgray;
@@ -1110,26 +1118,26 @@ input.qtyminus { width:25px; height:25px;}
 /* profile */
 
 .profileInformation {
-    margin-top: 50px;
-    margin-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 15px;
     font-weight: bold;
     color: #333333;
-    border: solid 1px lightgrey;
-    width: 270px;
-    border-radius: 5px;
-    background-color: ghostwhite;
+    width: 800px;
+    background-color: whitesmoke;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
     position: relative;
 
 }
 .profileInformation h3{
     color: #333333;
+    padding-top: 15px;
 }
 .profileInformation p {
-    border-bottom: solid 2px lightgrey;
+    border-bottom: solid 1px lightgrey;
+
 }
 
 
@@ -1140,33 +1148,30 @@ input.qtyminus { width:25px; height:25px;}
 }
 
 .wishList{
-    border-top: 1px solid;
+
 }
 
 .prof-wish{
     width: 870px;
-    border: solid 1px lightgrey;
     position: relative;
     text-align: center;
-    border-radius: 5px;
-    background-color: ghostwhite;
+    background-color: #FFE4E1;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
 
 }
 
 .prof-prev {
-    margin-left: 27.5%;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 35px;
+
 }
 
 .previousOrder{
     width: 870px;
     position: relative;
-    border: solid 1px lightgrey;
     text-align: center;
-    border-radius: 5px;
-    background-color: ghostwhite;
+    background-color: #e9ffdb;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
     padding-top: 20px;
     padding-bottom: 20px;

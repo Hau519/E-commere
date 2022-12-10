@@ -91,7 +91,7 @@
         </div>
     </section></center>
 
-<section class="prof-prev">
+<center><section class="prof-prev">
     <div class = "previousOrder">
             <div class="empty-title">
                 <p id="empty1">Your Previous Order</p>
@@ -150,7 +150,7 @@
         </div>
     </div>
 </div>
-</section>
+</section></center>
 
 <jsp:include page="./layouts/footer.jsp"/>
 </body>

@@ -23,15 +23,20 @@
     <a href="#">Contact us</a>
     <a href="#">Privacy Policy</a>
     <a href="#">Terms & Conditions</a>
+
+   <h4>My Account</h4>
+    <a href="${pageContext.request.contextPath}/login">Login</a>
+    <a href="${pageContext.request.contextPath}/cart">View Cart</a>
+    <a href="${pageContext.request.contextPath}/profile">My Wishlist</a>
   </div>
 
-  <div class="col">
+  <!--<div class="col">
     <h4>My Account</h4>
     <a href="${pageContext.request.contextPath}/login">Login</a>
     <a href="${pageContext.request.contextPath}/cart">View Cart</a>
     <a href="${pageContext.request.contextPath}/profile">My Wishlist</a>
     <a href="#">Help</a>
-  </div>
+  </div>-->
 
   <div class="col install">
     <h4>Install App</h4>
