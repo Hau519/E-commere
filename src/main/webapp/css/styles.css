@@ -671,13 +671,13 @@ footer a:hover
 /* Products */
 
 .products_container{
-    text-align: center;
+
     width: 750px;
     margin-left: auto;
     margin-right: auto;
     display: table-cell;
     position: relative;
-    border: 1px solid;
+
 
 }
 
@@ -712,10 +712,6 @@ footer a:hover
     margin-right: 10px;
     border: 1px white solid ;
 }
-
-
-
-
 
 .products:hover{
     box-shadow: 0 0 15px rgba(33,33,33,.2);
@@ -830,14 +826,13 @@ input.qtyminus { width:25px; height:25px;}
 }
 
 .name-input{
-
     margin-left: auto;
     margin-right: auto;
     display: table-cell;
     position: relative;
 }
 .cate-input{
-    left: 20px;
+    left: 10px;
     margin-left: auto;
     margin-right: auto;
     display: table-cell;
@@ -1116,14 +1111,14 @@ input.qtyminus { width:25px; height:25px;}
 
 .profileInformation {
     margin-top: 50px;
-    margin-left: 30px;
+    margin-left: 15px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 15px;
     font-weight: bold;
     color: #333333;
     border: solid 1px lightgrey;
-    width: 300px;
+    width: 270px;
     border-radius: 5px;
     background-color: ghostwhite;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
@@ -1145,13 +1140,13 @@ input.qtyminus { width:25px; height:25px;}
 }
 
 .wishList{
-    margin-left: 33%;
-    margin-top: -12.5%;
+    border-top: 1px solid;
 }
+
 .prof-wish{
-    width: 865px;
-    position: relative;
+    width: 870px;
     border: solid 1px lightgrey;
+    position: relative;
     text-align: center;
     border-radius: 5px;
     background-color: ghostwhite;
@@ -1160,13 +1155,13 @@ input.qtyminus { width:25px; height:25px;}
 }
 
 .prof-prev {
-    margin-left: 33%;
+    margin-left: 27.5%;
     margin-top: 30px;
     margin-bottom: 35px;
 }
 
 .previousOrder{
-    width: 865px;
+    width: 870px;
     position: relative;
     border: solid 1px lightgrey;
     text-align: center;

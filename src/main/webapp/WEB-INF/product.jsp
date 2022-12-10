@@ -48,9 +48,8 @@
     <center><a style="text-decoration: none" href="${pageContext.request.contextPath}/products" id="conshop"><b>Continue shopping</b></a></center><br>
 <% session.removeAttribute("loginRequireError");}%>
 
-<br><br>
-
-<div class="products_container">
+<br>
+<center><div class="products_container">
         <%
             for (Map.Entry<Integer, Products> product : products.entrySet())
             { %>
@@ -77,7 +76,7 @@
         <%}
         %>
 
-</div>
+</div></center>
 <br>
 <jsp:include page="./layouts/footer.jsp"/>
 

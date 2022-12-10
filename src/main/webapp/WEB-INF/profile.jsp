@@ -24,7 +24,7 @@
 <jsp:include page="./layouts/header.jsp"/>
 
 
-    <div class="profileInformation">
+    <center><div class="profileInformation">
         <h3>My Information</h3>
         <p id="proinfo"> <label>Name    :</label>
             <b><%= user.getFirstName() + " " + user.getLastName()%></b></p>
@@ -34,9 +34,9 @@
 
         <p id="proinfo"><label>Phone number    :</label>
             <b><%= user.getPhone()%></b></p>
-    </div>
+    </div></center>
 
-    <section class="wishList">
+    <center><section class="wishList">
         <div class="prof-wish">
         <section id="cart" class="section-prof">
             <table id="table1">
@@ -89,7 +89,7 @@
 
         </section>
         </div>
-    </section>
+    </section></center>
 
 <section class="prof-prev">
     <div class = "previousOrder">
