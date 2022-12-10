@@ -671,12 +671,13 @@ footer a:hover
 /* Products */
 
 .products_container{
-    left: 23%;
-    width: 1200px;
+    text-align: center;
+    width: 750px;
     margin-left: auto;
     margin-right: auto;
     display: table-cell;
     position: relative;
+    border: 1px solid;
 
 }
 
@@ -824,15 +825,19 @@ input.qtyminus { width:25px; height:25px;}
     background-color: #FF6347;
 } */
 
+.ser-bar {
+
+}
+
 .name-input{
-    left: 75%;
+
     margin-left: auto;
     margin-right: auto;
     display: table-cell;
     position: relative;
 }
 .cate-input{
-    left: 80%;
+    left: 20px;
     margin-left: auto;
     margin-right: auto;
     display: table-cell;
@@ -856,7 +861,7 @@ input.qtyminus { width:25px; height:25px;}
 }
 
 #name-input {
-    width: 300px;
+    width: 250px;
     height: 30px;
     border: lightgrey 1px solid;
     border-radius: 5px;
@@ -866,7 +871,7 @@ input.qtyminus { width:25px; height:25px;}
 }
 
 #category-input {
-    width: 300px;
+    width: 250px;
     height: 30px;
     border: lightgrey 1px solid;
     border-radius: 5px;
@@ -1118,7 +1123,7 @@ input.qtyminus { width:25px; height:25px;}
     font-weight: bold;
     color: #333333;
     border: solid 1px lightgrey;
-    width: 400px;
+    width: 300px;
     border-radius: 5px;
     background-color: ghostwhite;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
@@ -1144,7 +1149,7 @@ input.qtyminus { width:25px; height:25px;}
     margin-top: -12.5%;
 }
 .prof-wish{
-    width: 95%;
+    width: 865px;
     position: relative;
     border: solid 1px lightgrey;
     text-align: center;
@@ -1161,7 +1166,7 @@ input.qtyminus { width:25px; height:25px;}
 }
 
 .previousOrder{
-    width: 95%;
+    width: 865px;
     position: relative;
     border: solid 1px lightgrey;
     text-align: center;

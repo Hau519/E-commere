@@ -18,6 +18,7 @@
 <jsp:include page="./layouts/header.jsp"/>
 <br><br>
 
+<center><section class="ser-bar">
 <div class="name-input">
     <form action="#" method="post">
         <!--<label for="name-input"><b>Search by name</b></label>-->
@@ -34,6 +35,7 @@
         <button type="submit" id="filter-btn" value="filter">Search</button>
     </form>
 </div>
+</section></center>
 
 <!--<a href="${pageContext.request.contextPath}/products">All products-->
 <div class="pro_txt">
@@ -49,8 +51,6 @@
 <br><br>
 
 <div class="products_container">
-
-
         <%
             for (Map.Entry<Integer, Products> product : products.entrySet())
             { %>
