@@ -36,13 +36,13 @@
                 <input type="text" id="fname" name="fullname" placeholder=<%=user.getFirstName()+" "+user.getLastName()%>>
             <br>
                 <label for="address"> Address : </label>
-                <input type="text" id="address" name="address" placeholder="123 Lasalle Street">
+                <input type="text" id="address" name="address" placeholder="123 Lasalle Street" required>
             <br>
             <label for="city"> City : </label>
-                <input type="text" id="city" name="city" placeholder="Montreal">
+                <input type="text" id="city" name="city" placeholder="Montreal" required>
                 <div class="col-50">
-                    <label for="postcode">Post code : </label>
-                    <input type="text" id="postcode" name="postcode" placeholder="A1B2CD">
+                    <label for="postcode" >Post code : </label>
+                    <input type="text" id="postcode" name="postcode" placeholder="A1B2CD" required>
                 </div>
                 </div>
 
@@ -54,7 +54,7 @@
                     <!--<img src="${pageContext.request.contextPath}/img/mastercard_logo.png"/>-->
 
                 <div class="radio-input">
-                    <input id="card" type="radio" name="payment">
+                    <input id="card" type="radio" name="payment" checked>
                     Pay with credit card
                 </div>
             </label>

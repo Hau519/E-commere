@@ -39,3 +39,23 @@ create table customer(
 
     primary key (id)
 );
+
+create table orders (
+	id bigint not null auto_increment,
+    orderNumber varchar(20) not null,
+    userId bigint not null,
+    total float,
+    orderDate varchar(20) not null,
+    primary key (id),
+    foreign key (userId) references customer(id)
+);
+
+
+create table orderProducts (
+	id bigint not null auto_increment,
+    orderNumber varchar(20) not null,
+    productId bigint not null,
+    primary key (id),
+    foreign key (productId) references products(id)
+
+);

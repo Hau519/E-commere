@@ -1,16 +1,20 @@
-<%@ page import="models.entities.Customer" %>
-<%@ page import="models.entities.Order" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="models.entities.Products" %>
-<%@ page import="models.entities.ShoppingCart" %>
 <%@ page import="java.text.DecimalFormat" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="models.managers.OrderManager" %>
+<%@ page import="java.util.Map" %>
+<%@ page import="models.entities.*" %>
+<%@ page import="models.managers.OrderProductManager" %>
+<%@ page import="models.managers.ProductManager" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Customer user = (Customer) session.getAttribute("userLogin");
     ArrayList<Products> wishList = (ArrayList<Products>) session.getAttribute("wishList");
     if (wishList == null) wishList = new ArrayList<Products>();
-    ArrayList<Order> orderList = (ArrayList<Order>) session.getAttribute(Integer.toString(user.getId()));
-    if (orderList == null) orderList = new ArrayList<Order>();
+
+    HashMap<Integer, Order> orders = OrderManager.getOderByUserId(user.getId());
+    if (orders == null) orders = new HashMap<>();
+
     DecimalFormat formatter = new DecimalFormat("#0.00");
 %>
 
@@ -96,7 +100,7 @@
             <div class="empty-title">
                 <p id="empty1">Your Previous Order</p>
                 <br>
-                <% if (orderList.isEmpty()){%>
+                <% if (orders.isEmpty()){%>
                 <img id="empty-bag" src="./img/empty-bag.png">
                 <br><br>
                 <p id="empty2"><b>You don't have any order yet!</b></p>
@@ -109,16 +113,15 @@
                 <br>
 
                 <%} else{%>
-                <% for(Order order: orderList){%>
+                <%
+                    for (Map.Entry<Integer, Order> order : orders.entrySet()){
+                %>
+                <div>
+                <p class="prv">Order number: <%= order.getValue().getOrderNumber() %></p>
+                <p class="prv">Date: <%= order.getValue().getOrderDate().toString() %></p>
+                <p class="prv-tt">Total: $<%= order.getValue().getTotal() %></p>
 
-                <p class="prv">Order number: <%= order.getOrderNumber() %></p>
-                <p class="prv">Date: <%= order.getOrderDate() %></p>
-                <p class="prv-tt">Total: $<%= order.getTotal() %></p>
 
-
-                <!--<table width="100%" style="border: #333333 solid">
-                    <thead style="border: #333333 solid">
-                    <tr style="border: #333333 solid">-->
                 <section id="cart" class="section-prof">
                 <table id="table1">
                     <thead>
@@ -131,22 +134,28 @@
                     </tr>
                     </thead>
 
-                    <% for(ShoppingCart itemBought: order.getProductList()){%>
+                    <%
+                        HashMap<Integer, OrderProduct> orderProducts = OrderProductManager.getProductByOrderNumber(order.getValue().getOrderNumber());
+                        for (Map.Entry<Integer, OrderProduct> orderProduct : orderProducts.entrySet()){
+                            Products itemBought = ProductManager.getProductById(orderProduct.getValue().getProductId());
+                    %>
                     <!--<tbody style="border: #333333 solid">-->
                     <tr class="cart-items">
                         <td><img src="img/<%= itemBought.getName()%>.jpg" alt="" width="20%"></td>
                         <td><%= itemBought.getName()%></td>
                         <td class="price">$<%=itemBought.getPrice()%>/<%=itemBought.getUnit()%></td>
-                        <td><%= itemBought.getQuantity()%></td>
-                        <td>$<%= formatter.format(itemBought.getPrice()*itemBought.getQuantity())%></td>
+                        <td><%= orderProduct.getValue().getQuantity()%></td>
+                        <td>$<%= formatter.format(itemBought.getPrice()*orderProduct.getValue().getQuantity())%></td>
                     </tr>
+                    <% } %>
                     </tbody>
-                <%}
-                }
-                }
-            %>
             </table>
                 </section>
+                </div>
+                <%
+                }
+                }
+                %>
         </div>
     </div>
 </div>

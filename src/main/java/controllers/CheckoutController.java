@@ -5,7 +5,11 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import models.entities.Customer;
 import models.entities.Order;
+import models.entities.OrderProduct;
 import models.entities.ShoppingCart;
+import models.managers.OrderManager;
+import models.managers.OrderProductManager;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -16,14 +20,15 @@ public class CheckoutController extends HttpServlet {
         HttpSession session = request.getSession();
         ArrayList<ShoppingCart> cartList = (ArrayList<ShoppingCart>) session.getAttribute("cartList");
         Customer user = (Customer) session.getAttribute("userLogin");
-        ArrayList<Order> orders = new ArrayList<>();
         try{
             float total = Float.parseFloat(request.getParameter("total"));
             String orderNumber = Integer.toString(user.getId()) + Integer.toString((int) total);
-            Order order = new Order(orderNumber, cartList, user.getId(), total);
+            Order order = new Order(orderNumber, user.getId(), total);
+            OrderManager.insertNewOrder(order);
             session.setAttribute("newOrder", order);
-            orders.add(order);
-            session.setAttribute(Integer.toString(user.getId()), orders);
+            for (ShoppingCart itemInCart : cartList) {
+                OrderProductManager.insertNewOrderProduct(orderNumber, itemInCart.getId(), itemInCart.getQuantity());
+            }
         }catch(Exception ex){
             ex.printStackTrace();
         }

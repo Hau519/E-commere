@@ -19,6 +19,10 @@ public class CustomerManager {
 
     @Language("MySQL")
     private static final String querySearchEmail = "select * from customer where email = ?";
+
+    @Language("MySQL")
+    private static final String queryUpdate = "update customer set first_name = ?, last_name = ?, email = ?, phone=? where id = ?";
+
     public static HashMap<Integer, Customer> getAll(){
         HashMap<Integer, Customer> result = new HashMap<>();
         try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(queryDisplay)){
