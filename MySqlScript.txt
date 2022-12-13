@@ -59,3 +59,13 @@ create table orderProducts (
     foreign key (productId) references products(id)
 
 );
+
+ create table wishlist (
+	id bigint not null auto_increment,
+    name varchar(20) default null,
+    price float,
+    unit varchar(20),
+	userId int not null,
+    productId int not null,
+    primary key (id)
+);

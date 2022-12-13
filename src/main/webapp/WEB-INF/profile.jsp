@@ -6,14 +6,15 @@
 <%@ page import="models.entities.*" %>
 <%@ page import="models.managers.OrderProductManager" %>
 <%@ page import="models.managers.ProductManager" %>
+<%@ page import="models.managers.WishlistManager" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Customer user = (Customer) session.getAttribute("userLogin");
-    ArrayList<Products> wishList = (ArrayList<Products>) session.getAttribute("wishList");
-    if (wishList == null) wishList = new ArrayList<Products>();
-
     HashMap<Integer, Order> orders = OrderManager.getOderByUserId(user.getId());
     if (orders == null) orders = new HashMap<>();
+
+    HashMap<Integer, Wishlist> wishlists = WishlistManager.getWishlistByUserId(user.getId());
+    if (wishlists == null) wishlists = new HashMap<>();
 
     DecimalFormat formatter = new DecimalFormat("#0.00");
 %>
@@ -60,7 +61,7 @@
                 <div class="empty-title">
                     <p id="empty1">Your WishList</p>
                     <br>
-                    <% if (wishList.isEmpty()){%>
+                    <% if (wishlists.isEmpty()){%>
                     <img id="empty-bag" src="./img/empty-bag.png">
                     <br><br>
                     <p id="empty2"><b>Your wishlist is empty!</b></p>
@@ -73,17 +74,19 @@
                     <br>
 
                     <%} else{%>
-                    <% for(Products item: wishList){%>
+                    <%
+                        for (Map.Entry<Integer, Wishlist> wishlist : wishlists.entrySet()){
+                    %>
 
                 </div>
 
                 <div class="dd1">
                     <tr class="cart-items">
-                        <td class="remove-btn" id="remove-product"><a style="text-decoration: none" href="Remove?action=1?&index=<%=wishList.indexOf(item)%>" style="color: inherit;"><b>Remove</b></a></td>
-                        <td><img src="img/<%= item.getName()%>.jpg" alt=""></td>
-                        <td><%= item.getName()%></td>
-                        <td class="price">$<%=item.getPrice()%>/<%=item.getUnit()%></td>
-                        <td class="remove-btn"><a style="text-decoration: none" href="${pageContext.request.contextPath}/cart?id=<%=item.getId()%>" id="add-btn" style="color: inherit; "><b>Add to cart</b></a></td>
+                        <td class="remove-btn" id="remove-product"><a style="text-decoration: none" href="Remove?action=1?&id=<%=wishlist.getValue().getId()%>" style="color: inherit;"><b>Remove</b></a></td>
+                        <td><img src="img/<%= wishlist.getValue().getName()%>.jpg" alt=""></td>
+                        <td><%= wishlist.getValue().getName()%></td>
+                        <td class="price">$<%=wishlist.getValue().getPrice()%>/<%=wishlist.getValue().getUnit()%></td>
+                        <td class="remove-btn"><a style="text-decoration: none" href="${pageContext.request.contextPath}/cart?id=<%=wishlist.getValue().getProductId()%>" id="add-btn" style="color: inherit; "><b>Add to cart</b></a></td>
                     </tr>
                 </div>
 
