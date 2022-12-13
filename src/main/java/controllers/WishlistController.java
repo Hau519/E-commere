@@ -6,8 +6,11 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import models.entities.Customer;
 import models.entities.Products;
+import models.entities.Wishlist;
 import models.managers.ProductManager;
+import models.managers.WishlistManager;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,25 +27,10 @@ public class WishlistController extends HttpServlet {
             if (request.getParameter("id") != null) {
                 int id = Integer.parseInt(request.getParameter("id"));
                 Products product = ProductManager.getProductById(id);
-                ArrayList<Products> wishList = new ArrayList<>();
+                Customer user = (Customer) session.getAttribute("userLogin");
+                Wishlist newWishlist = new Wishlist(product.getName(), product.getPrice(), product.getUnit(), user.getId(), product.getId());
+                WishlistManager.insertNewWishlist(newWishlist);
 
-                if (session.getAttribute("wishList") == null) {
-                    wishList.add(product);
-                    session.setAttribute("wishList", wishList);
-                } else {
-                    wishList = (ArrayList<Products>) session.getAttribute("wishList");
-                    boolean already = false;
-                    for (Products itemInList : wishList) {
-                        if (itemInList.getId() == id) {
-                            already = true;
-                            session.setAttribute("itemInList", true);
-                        }
-                    }
-                    if (!already) {
-                        wishList.add(product);
-                    }
-                    session.setAttribute("wishList", wishList);
-                }
             }
             request.getRequestDispatcher("WEB-INF/profile.jsp").forward(request, response);
         }
