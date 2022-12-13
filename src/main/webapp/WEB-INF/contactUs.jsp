@@ -33,7 +33,7 @@
                     </div>
                     <input type='submit' class='signup_btn' value='Send' name="Send">
 
-                    <div class="bottom-text"><p>Come back to <a href='${pageContext.request.contextPath}/home.jsp'> <b> Home page</b></a>
+                    <div class="bottom-text"><p>Come back to <a href='${pageContext.request.contextPath}/home'> <b> Home page</b></a>
                     </div>
                 </form>
 

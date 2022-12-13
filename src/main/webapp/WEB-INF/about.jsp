@@ -32,11 +32,11 @@
   <section class="story2">
     <div class="story22">
 
-      <p>From the Farm Fresh to your plate</p>
+      <p>From Farm Fresh to your plate</p>
     </div>
 
     <div class="story222">
-      <p>We developed a community of hundreds of neighbourhood pick-up points to get food from our rooftops and partners to Lufavores as directly as possible. The idea is efficiency, convenience, and community-building.</p>
+      <p>We developed a community of hundreds of neighbourhood pick-up points to get food from our rooftops and partners to Farm Freshers as directly as possible. The idea is efficiency, convenience, and community-building.</p>
     </div>
 
     <div class="story2222">

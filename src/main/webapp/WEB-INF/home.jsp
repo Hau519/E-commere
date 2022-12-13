@@ -25,13 +25,13 @@
                 <p>Welcome to Farm Fresh</p>
             </div>
         <div>
-            <p id="inseason">What is in season</p>
+            <p id="inseason">What's in season</p>
             <div id="container">
                 <img src="${pageContext.request.contextPath}/img/vegetables.jpg" width="45%">
                 <div id="in-season1"></div>
                 <div id="pre-order">
                     <p class="order-btn">
-                        <a href="${pageContext.request.contextPath}/products"><input type="submit" value="Pre-Order"></a>
+                        <a href="${pageContext.request.contextPath}/products"><input type="submit" value="Order Our Products"></a>
                     </p>
                 </div>
                 <div class="box">
