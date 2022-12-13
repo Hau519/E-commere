@@ -20,7 +20,7 @@
   <div class="col">
     <h4>About</h4>
     <a href="${pageContext.request.contextPath}/about">About us</a>
-    <a href="#">Contact us</a>
+    <a href="${pageContext.request.contextPath}/contactUs">Contact us</a>
     <a href="#">Privacy Policy</a>
     <a href="#">Terms & Conditions</a>
 

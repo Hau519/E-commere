@@ -28,7 +28,7 @@
             <p id="inseason">What is in season</p>
             <div id="container">
                 <img src="${pageContext.request.contextPath}/img/vegetables.jpg" width="45%">
-                <div id="in-season1">Pre-order our products</div>
+                <div id="in-season1"></div>
                 <div id="pre-order">
                     <p class="order-btn">
                         <a href="${pageContext.request.contextPath}/products"><input type="submit" value="Pre-Order"></a>

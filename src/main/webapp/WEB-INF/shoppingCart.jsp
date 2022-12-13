@@ -92,11 +92,11 @@
 <section id="cart-add" class="section-p1">
 
     <div id="cuopon">
-        <h3>Apply Coupon</h3>
-        <div>
-            <input type="text" name="" id="" placeholder="Enter Your Coupon">
-            <button class="normal">Apply</button>
-        </div>
+<%--        <h3>Apply Coupon</h3>--%>
+<%--        <div>--%>
+<%--            <input type="text" name="" id="" placeholder="Enter Your Coupon">--%>
+<%--            <button class="normal">Apply</button>--%>
+<%--        </div>--%>
     </div>
     <div id="subtotal">
     <form action="${pageContext.request.contextPath}/checkout"  method="post">

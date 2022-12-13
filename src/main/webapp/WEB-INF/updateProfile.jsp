@@ -6,7 +6,7 @@
 %>
 <html>
 <head>
-    <title>Register</title>
+    <title>update your profile</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
     <link rel="Shortcut Icon" href="${pageContext.request.contextPath}/img/miniapple.png" type="image/x-icon">
 
@@ -19,9 +19,6 @@
             <div class="regi_form" >
                 <div>
                     <h2><b>Update profile</b></h2>
-                    <%if(session.getAttribute("regisErrorEmailExist")!=null){ %>
-                    <h3 class="error">This email already registered!</h3>
-                    <%session.removeAttribute("regisErrorEmailExist");}%>
                 </div>
                 <form action="${pageContext.request.contextPath}/updateProfile" method="post">
                     <div class="txtb">
