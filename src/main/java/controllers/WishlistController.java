@@ -14,6 +14,8 @@ import models.managers.WishlistManager;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 @WebServlet(name = "WishlistController", value = "/wishlist")
 public class WishlistController extends HttpServlet {
@@ -29,8 +31,14 @@ public class WishlistController extends HttpServlet {
                 Products product = ProductManager.getProductById(id);
                 Customer user = (Customer) session.getAttribute("userLogin");
                 Wishlist newWishlist = new Wishlist(product.getName(), product.getPrice(), product.getUnit(), user.getId(), product.getId());
+                HashMap<Integer, Wishlist> wishlists = WishlistManager.getWishlistByUserId(user.getId());
+                if (wishlists == null) wishlists = new HashMap<>();
+                for (Map.Entry<Integer, Wishlist> wishlist : wishlists.entrySet()){
+                    if(wishlist.getValue().getProductId()== product.getId()){
+                        request.getRequestDispatcher("WEB-INF/profile.jsp").forward(request, response);
+                    }
+                }
                 WishlistManager.insertNewWishlist(newWishlist);
-
             }
             request.getRequestDispatcher("WEB-INF/profile.jsp").forward(request, response);
         }

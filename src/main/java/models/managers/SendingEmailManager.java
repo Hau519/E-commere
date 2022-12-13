@@ -17,7 +17,7 @@ public class SendingEmailManager {
     public String buildConfirmMessage(Customer user, Order order){
         String greeting = "Dear " + user.getFirstName() + " !\n\n";
         String thankMessage = "Thank you for shopping with us!"+ "\n\nYour order details are as follow: \n";
-        String orderDetails = "Order number: " + order.getOrderNumber() + ".\nTotal amount: $"+ order.getTotal()+ ".\nDate of order: "+ order.getOrderDate();
+        String orderDetails = "Order number: " + order.getOrderNumber() + ".\nTotal amount: $"+ order.getTotal();
         String goodbye = "\n\nYour order will be deliver within 24 hours. \n\nKindest regards, Thank you!\n\n From FarmFresh with love!";
         return greeting + thankMessage + orderDetails + goodbye;
     }

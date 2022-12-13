@@ -11,13 +11,7 @@ import java.io.IOException;
 public class ProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ProductAction.getAll(request);
-        request.getRequestDispatcher("WEB-INF/product.jsp").forward(request,response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+//        ProductAction.getAll(request);
         if(request.getParameter("category")!=null){
             String categoryName = (String) request.getParameter("category");
             ProductAction.getByCategory(request, categoryName);
@@ -28,7 +22,9 @@ public class ProductController extends HttpServlet {
             ProductAction.getAll(request);
         }
         request.getRequestDispatcher("WEB-INF/product.jsp").forward(request,response);
+
     }
+
 
 
 

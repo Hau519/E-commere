@@ -20,7 +20,7 @@
 
 <center><section class="ser-bar">
 <div class="name-input">
-    <form action="#" method="post">
+    <form action="#" method="get">
         <!--<label for="name-input"><b>Search by name</b></label>-->
         <input name="name" id="name-input" placeholder="Search by Name"/>
         <button type="submit" id="search-btn" value="search">Search</button>
@@ -29,7 +29,7 @@
 </div>
 
 <div class="cate-input">
-    <form action="#" method="post">
+    <form action="${pageContext.request.contextPath}/products" method="get">
        <!-- <label for="category-input"><b>Search by category</b></label>-->
         <input name="category" id="category-input" placeholder="Search by Category"/>
         <button type="submit" id="filter-btn" value="filter">Search</button>
