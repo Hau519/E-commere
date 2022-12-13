@@ -27,7 +27,6 @@
 <body>
 <jsp:include page="./layouts/header.jsp"/>
 
-
     <center><div class="profileInformation">
         <h3>My Information</h3>
         <p id="proinfo"> <label>Name    :</label>
@@ -38,6 +37,8 @@
 
         <p id="proinfo"><label>Phone number    :</label>
             <b><%= user.getPhone()%></b></p>
+
+        <div><p class="empty5"><a href='${pageContext.request.contextPath}/updateProfile'> <b> Update profile</b></a></p></div>
     </div></center>
 
     <center><section class="wishList">

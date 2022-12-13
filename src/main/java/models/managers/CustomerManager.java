@@ -61,6 +61,24 @@ public class CustomerManager {
             DBConnection.getInstance().close();
         }
     }
+
+    public static void updateCustomer(int id, String fName, String lName, String email, String phone){
+
+        try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(queryUpdate)){
+            preparedStatement.setString(1, fName);
+            preparedStatement.setString(2, lName);
+            preparedStatement.setString(3, email);
+            preparedStatement.setString(4, phone);
+            preparedStatement.setInt(5, id);
+            preparedStatement.executeUpdate();
+
+        }catch(SQLException e){
+            throw new RuntimeException(e);
+        }finally {
+            DBConnection.getInstance().close();
+        }
+    }
+
     public static Customer getUserLogin(String email, String password){
         Customer user = null;
         try (PreparedStatement preparedStatement = DBConnection.getInstance().preparedQuery(queryCheckLogin)){

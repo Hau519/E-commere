@@ -41,7 +41,7 @@
                         <input type="password" placeholder='Enter your password. ' name="password" minlength="6" required pattern="^.{6,}$" title="Must contain at least 6 or more characters">
                     </div>
                     <input type='submit' class='signup_btn' value='Register' name="register">
-                    <div class="bottom-text"><p>Come back to <a href='${pageContext.request.contextPath}/login' target="_blank"> <b> Log-in</b></a>
+                    <div class="bottom-text"><p>Come back to <a href='${pageContext.request.contextPath}/login'> <b> Log-in</b></a>
                     </div>
                 </form>
 

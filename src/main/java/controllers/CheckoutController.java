@@ -22,7 +22,7 @@ public class CheckoutController extends HttpServlet {
         Customer user = (Customer) session.getAttribute("userLogin");
         try{
             float total = Float.parseFloat(request.getParameter("total"));
-            String orderNumber = Integer.toString(user.getId()) + Integer.toString((int) total);
+            String orderNumber = Integer.toString(user.getId()) + Float.toString(total).replace(".","");
             Order order = new Order(orderNumber, user.getId(), total);
             OrderManager.insertNewOrder(order);
             session.setAttribute("newOrder", order);
